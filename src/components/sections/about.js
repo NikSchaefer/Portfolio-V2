@@ -7,7 +7,6 @@ import sr from '@utils/sr';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
-
   .inner {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -141,20 +140,12 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
-            </p>
-
-            <p>
-              Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
-            </p>
+              I've been enjoying programming since I first began. I love supporting open source 
+               and making my own projects. I have taken on various roles between design, research and development.
+              In my free time I like to be contributing to open source projects, building my own projects, and further my education.            </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
           </div>

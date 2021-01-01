@@ -1,14 +1,16 @@
 ---
-date: '3'
-title: 'OctoProfile'
-cover: './octoprofile.png'
-github: 'https://github.com/bchiang7/octoprofile'
-external: 'https://octoprofile.now.sh'
+date: '1'
+title: 'CS Resources'
+cover: './csresources.png'
+github: 'https://github.com/NikSchaefer/csnotes'
+external: 'https://csresources.herokuapp.com/'
 tech:
-  - Next.js
-  - Chart.js
-  - GitHub API
+  - PostgresSQL
+  - Django
+  - Python
+  - React
+  - Typescript
 showInProjects: true
 ---
 
-A nicer look at your GitHub profile and repository stats with data visualizations of your top languages and stars. Sort through your top repos by number of stars, forks, and size.
+Contains direct comparisions of Frameworks and Providers to build your projects, A currated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!
