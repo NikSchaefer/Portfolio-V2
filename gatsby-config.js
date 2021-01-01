@@ -5,9 +5,15 @@ module.exports = {
     title: 'Nik Schaefer',
     description:
       'I am a self- taught full- stack developer and hobbyist programmer student specializing in React and Django',
-    siteUrl: 'https://nikschaefer.tech/', // No trailing slash allowed!
+    siteUrl: 'https://nikschaefer.tech', // No trailing slash allowed!
     image: '/me.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@NikSchaefer_',
+    author: 'nikkschaefer@gmail.com Nik Schaefer',
+    name: 'Nik Schaefer',
+    url: 'https://nikschaefer.tech',
+    language: `en-us`,
+    keywords: ['Nik', 'Schaefer', 'Programming', 'Engineer', 'Software', 'Code'],
+
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
