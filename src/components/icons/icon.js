@@ -18,7 +18,7 @@ const Icon = ({ name }) => {
       return <IconFolder />;
     case 'GitHub':
       return <IconGitHub />;
-    case 'Instagram':
+    case 'LinkedIn':
       return <IconLinkedin />;
     case 'Loader':
       return <IconLoader />;

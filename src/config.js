@@ -7,8 +7,8 @@ module.exports = {
       url: 'https://github.com/NikSchaefer',
     },
     {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/bchiang7',
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/',
     },
   ],
 
