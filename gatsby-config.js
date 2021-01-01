@@ -2,7 +2,7 @@ const config = require('./src/config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Nik Schaefer',
+    title: 'Nik Schaefer Portfolio',
     description:
       'I am a self- taught full- stack developer and hobbyist programmer student specializing in React and Django',
     siteUrl: 'https://nikschaefer.tech', // No trailing slash allowed!
@@ -157,7 +157,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: 'UA-45666519-2',
+        trackingId: 'G-2B47V4H829',
       },
     },
   ],
