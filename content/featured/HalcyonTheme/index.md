@@ -12,4 +12,4 @@ tech:
 showInProjects: true
 ---
 
-Contains direct comparisions of Frameworks and Providers to build your projects, A currated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!
+Instagram Clone but for Dogs!<br /> <br /> Contains thousands of Posts in a rest API

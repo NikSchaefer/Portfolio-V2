@@ -115,7 +115,7 @@ const StyledPic = styled.div`
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpg" }) {
+      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.png" }) {
         childImageSharp {
           fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -131,7 +131,12 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = [
+    'JavaScript (ES6+)', 'HTML & CSS',
+    'ReactJS', 'Node.js',
+    'Django', 'C#',
+    'Firebase', 'React Native',
+    'Python'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -143,8 +148,8 @@ const About = () => {
             <p>I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US</p>
 
             <p>
-              I've been enjoying programming since I first began. I love supporting open source 
-               and making my own projects. I have taken on various roles between design, research and development.
+              I've been enjoying programming since I first began. I love supporting open source
+              and making my own projects. I have taken on various roles between design, research and development.
               In my free time I like to be contributing to open source projects, building my own projects, and further my education.            </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
