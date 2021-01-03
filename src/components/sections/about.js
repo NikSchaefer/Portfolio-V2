@@ -136,7 +136,7 @@ const About = () => {
     'ReactJS', 'Node.js',
     'Django', 'C#',
     'Firebase', 'React Native',
-    'Python'];
+    'Python', 'Gatsby'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

@@ -1,6 +1,6 @@
 ---
 date: '2020'
-title: 'Add discord Friends'
+title: 'Find discord Friends'
 github: 'https://github.com/NikSchaefer/Find-Discord-Friends'
 external: 'https://github.com/NikSchaefer/Find-Discord-Friends'
 tech:

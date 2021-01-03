@@ -1,5 +1,5 @@
 ---
-date: '4'
+date: '1'
 title: 'InstaDog'
 cover: './instadog.png'
 github: 'https://github.com/NikSchaefer/InstaDog'
@@ -12,4 +12,4 @@ tech:
 showInProjects: true
 ---
 
-Instagram Clone but for Dogs!<br /> <br /> Contains thousands of Posts in a rest API
+Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated.
