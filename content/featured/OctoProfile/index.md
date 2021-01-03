@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '3'
 title: 'CS Resources'
 cover: './csresources.png'
 github: 'https://github.com/NikSchaefer/csnotes'

@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '2'
 title: 'Octo Stats'
 cover: './Octo.png'
 github: 'https://github.com/NikSchaefer/Octo-Stats'
