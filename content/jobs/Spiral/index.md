@@ -7,5 +7,4 @@ range: 'September  - December 2020'
 url: 'https://spiralesports.vercel.app/'
 ---
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+- Developed a responsive website for a growing buisness

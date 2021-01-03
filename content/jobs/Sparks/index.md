@@ -7,5 +7,4 @@ range: 'October  - December 2020'
 url: 'https://sparksvolleyballclub.com/'
 ---
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+- Worked Directly with a partner and client to develop a reactive website

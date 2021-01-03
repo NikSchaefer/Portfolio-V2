@@ -7,5 +7,4 @@ range: 'September - December 2020'
 url: 'https://www.theesportcompany.com/'
 ---
 
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+- Worked directly with CEO and mentor to build a Wordpress Website

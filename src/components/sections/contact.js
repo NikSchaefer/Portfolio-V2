@@ -47,11 +47,11 @@ export default function Contact() {
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
       <h2 className="numbered-heading overline">What’s Next?</h2>
-
       <h2 className="title">Get In Touch</h2>
 
       <p>
-        Feel free to send me a message, my inbox is always open. Say Hello!
+        I do fullstack Freelance Development and feel
+        free to send me a message for possible inquires, collaborations, projects or anything else, my inbox is always open. Say Hello!
       </p>
 
       <a className="email-link" href={`mailto:${email}`}>
