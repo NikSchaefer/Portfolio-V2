@@ -1,5 +1,5 @@
 ---
-date: '2020-9-22'
+date: '1'
 title: 'Web Developer Intern'
 company: 'The Esport Company'
 location: 'Remote'

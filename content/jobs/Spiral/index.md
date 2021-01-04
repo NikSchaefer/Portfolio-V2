@@ -1,5 +1,5 @@
 ---
-date: '2020-12-1'
+date: '2'
 title: 'Web Developer'
 company: 'Spiral'
 location: 'Remote'
