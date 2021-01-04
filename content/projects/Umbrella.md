@@ -1,5 +1,5 @@
 ---
-date: '2020'
+date: '2020-8'
 title: 'Umbrella App'
 github: 'https://github.com/NikSchaefer/umbrella_website'
 external: 'https://theumbrella.vercel.app/'
