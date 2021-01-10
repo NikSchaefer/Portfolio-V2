@@ -132,11 +132,19 @@ const About = () => {
   }, []);
 
   const skills = [
-    'JavaScript (ES6+)', 'HTML & CSS',
-    'ReactJS', 'Node.js',
-    'Django', 'C#',
-    'Firebase', 'React Native',
-    'Python', 'Gatsby'];
+    'JavaScript (ES6+)',
+    'HTML & CSS',
+    'Typescript(ES6+)',
+    'NextJS',
+    'ReactJS',
+    'Node.js',
+    'Django',
+    'C#',
+    'Firebase',
+    'React Native',
+    'Python',
+    'Gatsby',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -145,12 +153,17 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US</p>
+            <p>
+              I'm Nik, self-taught full-stack developer and hobbyist programmer student based in
+              Minnesota, US
+            </p>
 
             <p>
-              I've been enjoying programming since I first began. I love supporting open source
-              and making my own projects. I have taken on various roles between design, research and development.
-              In my free time I like to be contributing to open source projects, building my own projects, and further my education.            </p>
+              I've been enjoying programming since I first began. I love supporting open source and
+              making my own projects. I have taken on various roles between design, research and
+              development. In my free time I like to be contributing to open source projects,
+              building my own projects, and further my education.{' '}
+            </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
           </div>
