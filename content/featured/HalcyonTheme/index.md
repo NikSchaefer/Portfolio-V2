@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '20'
 title: 'InstaDog'
 cover: './instadog.png'
 github: 'https://github.com/NikSchaefer/InstaDog'

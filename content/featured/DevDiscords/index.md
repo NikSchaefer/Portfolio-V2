@@ -1,5 +1,5 @@
 ---
-date: '5'
+date: '17'
 title: 'Developer Discords'
 cover: './dev.png'
 github: 'https://github.com/NikSchaefer/dev-discords'
@@ -9,7 +9,6 @@ tech:
   - Typescript
   - NextJS
   - Styled Components
-  - Vercel
 showInProjects: true
 ---
 
