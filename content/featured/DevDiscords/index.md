@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '5'
 title: 'Developer Discords'
 cover: './dev.png'
 github: 'https://github.com/NikSchaefer/dev-discords'
