@@ -1,7 +1,7 @@
 ---
 date: '20'
 title: 'InstaDog'
-cover: './instadog.png'
+cover: '/instadog.png'
 github: 'https://github.com/NikSchaefer/InstaDog'
 external: 'https://instadog.vercel.app/'
 tech:

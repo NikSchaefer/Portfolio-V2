@@ -43,13 +43,6 @@ const PrismStyles = css`
     hyphens: none;
   }
 
-  /**
-  * Remove the default PrismJS theme background-color, border-radius, margin,
-  * padding and overflow.
-  * 1. Make the element just wide enough to fit its content.
-  * 2. Always fill the visible space in .gatsby-highlight.
-  * 3. Adjust the position of the line numbers
-  */
   .gatsby-highlight pre[class*='language-'] {
     background-color: transparent;
     margin: 0;

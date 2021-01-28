@@ -1,7 +1,7 @@
 ---
 date: '1'
 title: 'CS Resources'
-cover: './csresources.png'
+cover: '/csresources.png'
 github: 'https://github.com/NikSchaefer/csnotes'
 external: 'https://csresources.herokuapp.com/'
 tech:

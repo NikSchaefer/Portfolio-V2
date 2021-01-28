@@ -1,7 +1,7 @@
 ---
 date: '15'
 title: 'Octo Stats'
-cover: './Octo.png'
+cover: '/Octo.png'
 github: 'https://github.com/NikSchaefer/Octo-Stats'
 external: 'https://octo-stats.vercel.app/'
 tech:

@@ -1,7 +1,12 @@
 /* eslint-disable react/no-array-index-key */
+import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import sr from '@utils/sr';
+import fs from 'fs'
 import { useStaticQuery, graphql } from 'gatsby';
+import matter from "gray-matter";
+import hydrate from "next-mdx-remote/hydrate";
 import Image from 'next/image';
+import path from 'path'
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
@@ -248,34 +253,34 @@ const StyledProject = styled.div`
   }
 `;
 
-function Featured() {
-  const data = useStaticQuery(graphql`
-    query {
-      featured: allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/featured/" } }
-        sort: { fields: [frontmatter___date], order: ASC }
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              cover {
-                childImageSharp {
-                  fluid(maxWidth: 700, traceSVG: { color: "#64ffda" }) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
-                }
-              }
-              tech
-              github
-              external
-            }
-            html
-          }
-        }
-      }
-    }
-  `);
+function Featured({ data }) {
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     featured: allMarkdownRemark(
+  //       filter: { fileAbsolutePath: { regex: "/featured/" } }
+  //       sort: { fields: [frontmatter___date], order: ASC }
+  //     ) {
+  //       edges {
+  //         node {
+  //           frontmatter {
+  //             title
+  //             cover {
+  //               childImageSharp {
+  //                 fluid(maxWidth: 700, traceSVG: { color: "#64ffda" }) {
+  //                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
+  //                 }
+  //               }
+  //             }
+  //             tech
+  //             github
+  //             external
+  //           }
+  //           html
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
 
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
 
@@ -291,7 +296,6 @@ function Featured() {
       <h2 className="numbered-heading" ref={revealTitle}>
         Some Things I’ve Built
       </h2>
-
       <div>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
@@ -343,3 +347,24 @@ function Featured() {
 
 // eslint-disable-next-line import/no-default-export
 export default Featured;
+
+const getStaticProps = async function ({ params })
+{
+  const featuredPath = path.join(POSTS_PATH, "featured")
+  const postFilePath = path.join(featuredPath, `${ String(params?.slug) }.mdx`);
+
+  const source = fs.readFileSync(postFilePath);
+
+  const { content, data } = matter(source)
+
+  const mdxSource = await renderToString(content, {
+		components,
+		scope: data,
+  });
+  return {
+		props: {
+			source: mdxSource,
+			frontMatter: data,
+		},
+	};
+}

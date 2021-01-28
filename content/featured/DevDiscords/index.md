@@ -1,7 +1,7 @@
 ---
 date: '17'
 title: 'Developer Discords'
-cover: './dev.png'
+cover: '/devdiscords.png'
 github: 'https://github.com/NikSchaefer/dev-discords'
 external: 'https://dev-discords.now.sh/'
 tech:
