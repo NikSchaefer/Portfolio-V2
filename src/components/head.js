@@ -1,29 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
-// https://www.gatsbyjs.com/docs/add-seo-component/
+import { siteMetadata } from '../config'
 
-const Head = ({ title, description, image }) => {
+
+function Head({ title, description, image }) {
   const { pathname } = useLocation();
 
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle: title
-            defaultDescription: description
-            siteUrl
-            defaultImage: image
-            twitterUsername
-          }
-        }
-      }
-    `,
-  );
 
   const {
     defaultTitle,
@@ -31,7 +16,7 @@ const Head = ({ title, description, image }) => {
     siteUrl,
     defaultImage,
     twitterUsername,
-  } = site.siteMetadata;
+  } = siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
@@ -62,8 +47,9 @@ const Head = ({ title, description, image }) => {
       <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
     </Helmet>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Head;
 
 Head.propTypes = {

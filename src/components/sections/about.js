@@ -1,9 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import styled from 'styled-components';
-import { srConfig } from '@config';
+/* eslint-disable react/no-array-index-key */
 import sr from '@utils/sr';
+import Image from 'next/image'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+
+import { srConfig } from '../../config';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -112,7 +113,7 @@ const StyledPic = styled.div`
   }
 `;
 
-const About = () => {
+function About() {
   const data = useStaticQuery(graphql`
     query {
       avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.png" }) {
@@ -169,18 +170,19 @@ const About = () => {
           </div>
 
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {skills && skills.map((skill, i) => <li key={`skill-${i}`}>{skill}</li>)}
           </ul>
         </StyledText>
 
         <StyledPic>
           <div className="wrapper">
-            <Img fluid={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" />
+            <Image width={500} height={500} src="/me.png" alt="Avatar" className="img" />
           </div>
         </StyledPic>
       </div>
     </StyledAboutSection>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default About;

@@ -32,4 +32,5 @@ const useOnClickOutside = (ref, handler) => {
   );
 };
 
+// eslint-disable-next-line import/no-default-export
 export default useOnClickOutside;

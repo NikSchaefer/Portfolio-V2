@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
 import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { loaderDelay } from '@utils';
+
+import { loaderDelay } from '../utils';
 
 const StyledSideElement = styled.div`
   width: 40px;
@@ -23,7 +25,7 @@ const StyledSideElement = styled.div`
   }
 `;
 
-const Side = ({ children, isHome, orientation }) => {
+function Side({ children, isHome, orientation }) {
   const [isMounted, setIsMounted] = useState(!isHome);
 
   useEffect(() => {
@@ -45,7 +47,7 @@ const Side = ({ children, isHome, orientation }) => {
       </TransitionGroup>
     </StyledSideElement>
   );
-};
+}
 
 Side.propTypes = {
   children: PropTypes.node.isRequired,
@@ -53,4 +55,5 @@ Side.propTypes = {
   orientation: PropTypes.string,
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Side;

@@ -1,10 +1,12 @@
-import React, { useEffect, useRef } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-import styled from 'styled-components';
+/* eslint-disable react/no-array-index-key */
 import sr from '@utils/sr';
-import { srConfig } from '@config';
-import { Icon } from '@components/icons';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'next/image';
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+
+import { srConfig } from '../../config';
+import { Icon } from '../icons';
 
 const StyledProject = styled.div`
   display: grid;
@@ -246,7 +248,7 @@ const StyledProject = styled.div`
   }
 `;
 
-const Featured = () => {
+function Featured() {
   const data = useStaticQuery(graphql`
     query {
       featured: allMarkdownRemark(
@@ -301,9 +303,10 @@ const Featured = () => {
                 <div className="project-content">
                   <p className="project-overline">Featured Project</p>
                   <h3 className="project-title">{title}</h3>
+                  {/* eslint-disable-next-line react/no-danger */}
                   <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
 
-                  {tech.length && (
+                  {tech.length > 0 && (
                     <ul className="project-tech-list">
                       {tech.map((tech, i) => (
                         <li key={i}>{tech}</li>
@@ -327,7 +330,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
+                    <Image width={500} height={300} src={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
                 </div>
               </StyledProject>
@@ -336,6 +339,7 @@ const Featured = () => {
       </div>
     </section>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Featured;

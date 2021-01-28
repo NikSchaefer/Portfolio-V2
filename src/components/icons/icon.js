@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import {
   IconExternal,
   IconFolder,
@@ -9,8 +7,10 @@ import {
   IconLogo,
   IconZap,
 } from '@components/icons';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const Icon = ({ name }) => {
+function Icon({ name }) {
   switch (name) {
     case 'External':
       return <IconExternal />;
@@ -29,10 +29,11 @@ const Icon = ({ name }) => {
     default:
       return <IconExternal />;
   }
-};
+}
 
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Icon;

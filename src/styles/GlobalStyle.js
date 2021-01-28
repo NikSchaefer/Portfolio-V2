@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-import TransitionStyles from './TransitionStyles';
+
 import PrismStyles from './PrismStyles';
+import TransitionStyles from './TransitionStyles';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -420,4 +421,5 @@ const GlobalStyle = createGlobalStyle`
   ${PrismStyles};
 `;
 
+// eslint-disable-next-line import/no-default-export
 export default GlobalStyle;

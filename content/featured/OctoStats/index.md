@@ -8,7 +8,7 @@ tech:
   - React
   - Typescript
   - Rest API
-  - Gatsby
+  - NextJS
 showInProjects: true
 ---
 

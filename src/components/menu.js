@@ -1,10 +1,12 @@
+/* eslint-disable react/no-array-index-key */
+import { Link } from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { navLinks } from '@config';
-import { KEY_CODES } from '@utils';
-import { useOnClickOutside } from '@hooks';
+
+import { navLinks } from '../config';
+import { useOnClickOutside } from '../hooks';
+import { KEY_CODES } from '../utils';
 
 const StyledMenu = styled.div`
   display: none;
@@ -155,7 +157,8 @@ const StyledSidebar = styled.aside`
   }
 `;
 
-const Menu = () => {
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -168,7 +171,8 @@ const Menu = () => {
   let lastFocusableEl;
 
   const setFocusables = () => {
-    menuFocusables = [buttonRef.current, ...Array.from(navRef.current.querySelectorAll('a'))];
+    menuFocusables = [buttonRef.current, ...[...navRef.current.querySelectorAll('a')]];
+    // eslint-disable-next-line prefer-destructuring
     firstFocusableEl = menuFocusables[0];
     lastFocusableEl = menuFocusables[menuFocusables.length - 1];
   };
@@ -230,6 +234,7 @@ const Menu = () => {
       document.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('resize', onResize);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const wrapperRef = useRef();
@@ -254,7 +259,7 @@ const Menu = () => {
               <ol>
                 {navLinks.map(({ url, name }, i) => (
                   <li key={i}>
-                    <Link to={url}>{name}</Link>
+                    <Link href={url}>{name}</Link>
                   </li>
                 ))}
               </ol>
@@ -264,6 +269,7 @@ const Menu = () => {
       </div>
     </StyledMenu>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Menu;

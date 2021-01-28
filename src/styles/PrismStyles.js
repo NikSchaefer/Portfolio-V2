@@ -13,8 +13,6 @@ const prismColors = {
   comment: `#8695b799`,
 };
 
-// https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-
 const PrismStyles = css`
   /**
   * Add back the container background-color, border-radius, padding, margin
@@ -224,4 +222,5 @@ const PrismStyles = css`
   }
 `;
 
+// eslint-disable-next-line import/no-default-export
 export default PrismStyles;

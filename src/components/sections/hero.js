@@ -1,8 +1,10 @@
+/* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { email } from '@config';
-import { navDelay, loaderDelay } from '@utils';
+
+import { email } from '../../config';
+import { navDelay, loaderDelay } from '../../utils';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -39,7 +41,7 @@ const StyledHeroSection = styled.section`
   }
 `;
 
-const Hero = () => {
+function Hero() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -75,6 +77,7 @@ const Hero = () => {
       </TransitionGroup>
     </StyledHeroSection>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Hero;

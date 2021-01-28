@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { IconLoader } from '@components/icons';
+import anime from 'animejs';
+import PropTypes from 'prop-types';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import PropTypes from 'prop-types';
-import anime from 'animejs';
 import styled from 'styled-components';
-import { IconLoader } from '@components/icons';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -36,7 +37,7 @@ const StyledLoader = styled.div`
   }
 `;
 
-const Loader = ({ finishLoading }) => {
+function Loader({ finishLoading }) {
   const animate = () => {
     const loader = anime.timeline({
       complete: () => finishLoading(),
@@ -77,10 +78,11 @@ const Loader = ({ finishLoading }) => {
       </div>
     </StyledLoader>
   );
-};
+}
 
 Loader.propTypes = {
   finishLoading: PropTypes.func.isRequired,
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Loader;

@@ -1,7 +1,8 @@
+import sr from '@utils/sr';
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
-import sr from '@utils/sr';
+
+import { srConfig, email } from '../../config';
 
 const StyledContactSection = styled.section`
   max-width: 400px;
@@ -40,6 +41,7 @@ const StyledContactSection = styled.section`
   }
 `;
 
+// eslint-disable-next-line import/no-default-export
 export default function Contact() {
   const revealContainer = useRef(null);
   useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);

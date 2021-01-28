@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+/* eslint-disable react/no-array-index-key */
+import { Link } from 'next/link';
 import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
-import { navLinks } from '@config';
-import { loaderDelay } from '@utils';
-import { useScrollDirection } from '@hooks';
-import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
+
+import { navLinks } from '../config';
+import { useScrollDirection } from '../hooks';
+import { loaderDelay } from '../utils';
+import { IconLogo } from './icons';
+
+import { Menu } from '.';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -125,7 +128,7 @@ const StyledLinks = styled.div`
   }
 `;
 
-const Nav = ({ isHome }) => {
+function Nav({ isHome }) {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -159,11 +162,14 @@ const Nav = ({ isHome }) => {
             <CSSTransition classNames={fadeClass} timeout={timeout}>
               <div className="logo" tabIndex="-1">
                 {isHome ? (
-                  <a href="/" aria-label="home">
+                  <Link href="/">
+                      <a aria-label="home">
                     <IconLogo />
                   </a>
+
+                  </Link>
                 ) : (
-                  <Link to="/" aria-label="home">
+                  <Link href="/" aria-label="home">
                     <IconLogo />
                   </Link>
                 )}
@@ -198,10 +204,11 @@ const Nav = ({ isHome }) => {
       </StyledNav>
     </StyledHeader>
   );
-};
+}
 
 Nav.propTypes = {
   isHome: PropTypes.bool,
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Nav;

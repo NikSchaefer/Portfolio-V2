@@ -1,7 +1,7 @@
 import React from 'react';
 
-const IconLoader = () => (
-  <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+function IconLoader() {
+  return <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
     <title>Loader Logo</title>
     <g>
       <path
@@ -18,6 +18,7 @@ const IconLoader = () => (
       />
     </g>
   </svg>
-);
+}
 
+// eslint-disable-next-line import/no-default-export
 export default IconLoader;

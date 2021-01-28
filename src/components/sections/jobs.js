@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import { KEY_CODES } from '@utils';
-import sr from '@utils/sr';
+
+import { srConfig } from '../../config';
+import { KEY_CODES } from '../../utils';
+import sr from '../../utils/sr';
 
 const StyledJobsSection = styled.section`
   max-width: 700px;
@@ -153,7 +156,7 @@ const StyledTabContent = styled.div`
   }
 `;
 
-const Jobs = () => {
+function Jobs() {
   const data = useStaticQuery(graphql`
     query {
       jobs: allMarkdownRemark(
@@ -235,7 +238,7 @@ const Jobs = () => {
                     ref={el => (tabs.current[i] = el)}
                     id={`tab-${i}`}
                     role="tab"
-                    aria-selected={activeTabId === i ? true : false}
+                    aria-selected={activeTabId === i}
                     aria-controls={`panel-${i}`}
                     tabIndex={activeTabId === i ? '0' : '-1'}>
                     <span>{company}</span>
@@ -272,6 +275,7 @@ const Jobs = () => {
 
                   <p className="range">{range}</p>
 
+                  {/* eslint-disable-next-line react/no-danger */}
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                 </StyledTabContent>
               </CSSTransition>
@@ -280,6 +284,7 @@ const Jobs = () => {
       </div>
     </StyledJobsSection>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Jobs;

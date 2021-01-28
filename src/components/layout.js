@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { Head, Loader, Nav, Social, Email, Footer } from '@components';
-import { GlobalStyle, theme } from '@styles';
 
-// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
+import { GlobalStyle, theme } from '../styles';
+
+import { Head, Loader, Nav, Social, Email, Footer } from '.';
+
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]');
@@ -44,30 +45,9 @@ const StyledContent = styled.div`
   flex-direction: column;
   min-height: 100vh;
 `;
-
-const Layout = ({ children, location }) => {
-  const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(isHome);
-
-  useEffect(() => {
-    if (isLoading) {
-      return;
-    }
-    if (location.hash) {
-      const id = location.hash.substring(1); // location.hash without the '#'
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView();
-          el.focus();
-        }
-      }, 0);
-    }
-  }, [isLoading]);
-
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
-    const allLinks = Array.from(document.querySelectorAll('a'));
+    const allLinks = [...document.querySelectorAll('a')];
     if (allLinks.length > 0) {
       allLinks.forEach(link => {
         if (link.host !== window.location.host) {
@@ -77,6 +57,28 @@ const Layout = ({ children, location }) => {
       });
     }
   };
+
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function Layout({ children, location }) {
+  const isHome = location.pathname === '/';
+  const [isLoading, setIsLoading] = useState(isHome);
+
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+    if (location.hash) {
+      const id = location.hash.slice(1); // location.hash without the '#'
+      setTimeout(() => {
+        const el = document.querySelector(`#${id}`);
+        if (el) {
+          el.scrollIntoView();
+          el.focus();
+        }
+      }, 0);
+    }
+  }, [isLoading, location.hash]);
+
 
   useEffect(() => {
     handleExternalLinks();
@@ -110,11 +112,12 @@ const Layout = ({ children, location }) => {
       </div>
     </>
   );
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   location: PropTypes.object.isRequired,
 };
 
+// eslint-disable-next-line import/no-default-export
 export default Layout;

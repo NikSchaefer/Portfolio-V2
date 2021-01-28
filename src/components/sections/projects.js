@@ -1,10 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/no-danger */
+import sr from '@utils/sr';
 import { useStaticQuery, graphql } from 'gatsby';
+import React, { useState, useEffect, useRef } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { Icon } from '@components/icons';
+
+import { srConfig } from '../../config';
+import { Icon } from '../icons';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -132,7 +135,7 @@ const StyledProject = styled.div`
   }
 `;
 
-const Projects = () => {
+function Projects() {
   const data = useStaticQuery(graphql`
     query {
       projects: allMarkdownRemark(
@@ -240,11 +243,12 @@ const Projects = () => {
           })}
       </TransitionGroup>
 
-      <button className="more-button" onClick={() => setShowMore(!showMore)}>
+      <button type='button' className="more-button" onClick={() => setShowMore(!showMore)}>
         Show {showMore ? 'Less' : 'More'}
       </button>
     </StyledProjectsSection>
   );
-};
+}
 
+// eslint-disable-next-line import/no-default-export
 export default Projects;

@@ -1,10 +1,16 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable @next/next/no-html-link-for-pages */
+import { Icon } from '@components/icons';
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from '@components/icons';
-import { socialMedia } from '@config';
+
+import { socialMedia } from '../config';
+import { mixins } from '../styles'
 
 const StyledFooter = styled.footer`
-  ${({ theme }) => theme.mixins.flexCenter};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   flex-direction: column;
   height: auto;
   min-height: 70px;
@@ -23,7 +29,7 @@ const StyledSocialLinks = styled.div`
   }
 
   ul {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     padding: 0;
     margin: 0;
     list-style: none;
@@ -45,6 +51,7 @@ const StyledCredit = styled.div`
   line-height: 1;
 `;
 
+// eslint-disable-next-line import/no-default-export
 export default function Footer() {
   return (
     <StyledFooter>
