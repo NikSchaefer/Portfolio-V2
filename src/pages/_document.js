@@ -39,13 +39,13 @@ export default class MyDocument extends Document {
 
 					<meta
 						itemProp="name"
-						content="NextJS Boilerplate | Nik Schaefer"
+						content="Nik Schaefer Portfolio"
 					/>
 					<meta
 						itemProp="description"
 						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
 					/>
-					<meta itemProp="image" content="/logo.png" />
+					<meta itemProp="image" content="/me.png" />
 
 					<meta
 						property="og:url"
@@ -54,24 +54,24 @@ export default class MyDocument extends Document {
 					<meta property="og:type" content="website" />
 					<meta
 						property="og:title"
-						content="NextJS Boilerplate | Nik Schaefer"
+						content="Nik Schaefer Portfolio"
 					/>
 					<meta
 						property="og:description"
 						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
 					/>
-					<meta property="og:image" content="/logo.png" />
+					<meta property="og:image" content="/me.png" />
 
 					<meta name="twitter:card" content="summary_large_image" />
 					<meta
 						name="twitter:title"
-						content="NextJS Boilerplate | Nik Schaefer"
+						content="Nik Schaefer Portfolio"
 					/>
 					<meta
 						name="twitter:description"
 						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
 					/>
-					<meta name="twitter:image" content="/logo.png" />
+					<meta name="twitter:image" content="/me.png" />
 
 					<script
 						async

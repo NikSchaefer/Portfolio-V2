@@ -19,7 +19,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>NextJS Boilerplate | Nik Schaefer</title>
+				<title>Nik Schaefer Portfolio</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 

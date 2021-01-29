@@ -251,7 +251,7 @@ const StyledProject = styled.div`
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function Featured() {
-	const featuredProjects = jsonData;
+	const featuredProjects = jsonData.sort((a, b) => {return a.date - b.date});
 
 	const revealTitle = useRef(null);
 	const revealProjects = useRef([]);
@@ -275,8 +275,8 @@ function Featured() {
 							title,
 							tech,
 							github,
-              cover,
-              content,
+							cover,
+							content,
 						} = data;
 
 						return (
@@ -289,11 +289,9 @@ function Featured() {
 										Featured Project
 									</p>
 									<h3 className="project-title">{title}</h3>
-									<div
-										className="project-description"
-                  >
-                    <p>{content}</p>
-                  </div>
+									<div className="project-description">
+										<p>{content}</p>
+									</div>
 
 									{tech.length > 0 && (
 										<ul className="project-tech-list">
@@ -335,9 +333,9 @@ function Featured() {
 										}
 									>
 										<Image
-											width={500}
-											height={300}
-											src={`featured/${cover}`}
+											layout='fill'
+											objectFit="true"
+											src={`/featured/${cover}.png`}
 											alt={title}
 											className="img"
 										/>

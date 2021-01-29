@@ -1,10 +1,9 @@
-import {useRouter} from 'next/router'
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import { GlobalStyle, theme } from "../styles";
-
 
 import { Head, Loader, Nav, Social, Email, Footer } from ".";
 
@@ -61,9 +60,8 @@ const handleExternalLinks = () => {
 };
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-function Layout({ children })
-{
-	const router = useRouter()
+function Layout({ children }) {
+	const router = useRouter();
 	const isHome = router.pathname === "/";
 	const [isLoading, setIsLoading] = useState(isHome);
 

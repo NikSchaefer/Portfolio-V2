@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
-import sr from "@utils/sr";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import { srConfig } from "../../config";
+import sr from "../../utils/sr";
 
 const StyledAboutSection = styled.section`
 	max-width: 900px;
@@ -114,31 +114,17 @@ const StyledPic = styled.div`
 `;
 
 function About() {
-	const data = useStaticQuery(graphql`
-		query {
-			avatar: file(
-				sourceInstanceName: { eq: "images" }
-				relativePath: { eq: "me.png" }
-			) {
-				childImageSharp {
-					fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
-						...GatsbyImageSharpFluid_withWebp_tracedSVG
-					}
-				}
-			}
-		}
-	`);
-
 	const revealContainer = useRef(null);
 
-	useEffect(() => {
+	useEffect(() =>
+	{
 		sr.reveal(revealContainer.current, srConfig());
 	}, []);
 
 	const skills = [
 		"JavaScript (ES6+)",
 		"HTML & CSS",
-		"Typescript(ES6+)",
+		"Typescript",
 		"NextJS",
 		"ReactJS",
 		"Node.js",

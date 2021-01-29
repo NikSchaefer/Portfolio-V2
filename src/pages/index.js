@@ -19,12 +19,12 @@ function IndexPage({ location }) {
 	return (
 		<Layout location={location}>
 			<StyledMainContainer className="fillHeight">
-				{/* <Hero />
-      <About />
-      <Jobs />
-      <Featured />
-      <Projects />
-      <Contact /> */}
+				<Hero />
+				<About />
+				<Jobs />
+				<Featured />
+				{/* <Projects /> */}
+				<Contact />
 			</StyledMainContainer>
 		</Layout>
 	);

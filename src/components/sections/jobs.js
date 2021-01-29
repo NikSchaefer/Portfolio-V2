@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
+import jsonData from '../../../content/jobs.json'
 import { srConfig } from "../../config";
 import { KEY_CODES } from "../../utils";
 import sr from "../../utils/sr";
@@ -160,29 +161,8 @@ const StyledTabContent = styled.div`
 `;
 
 function Jobs() {
-	const data = useStaticQuery(graphql`
-		query {
-			jobs: allMarkdownRemark(
-				filter: { fileAbsolutePath: { regex: "/jobs/" } }
-				sort: { fields: [frontmatter___date], order: DESC }
-			) {
-				edges {
-					node {
-						frontmatter {
-							title
-							company
-							location
-							range
-							url
-						}
-						html
-					}
-				}
-			}
-		}
-	`);
 
-	const jobsData = data.jobs.edges;
+	const jobsData = jsonData.sort((a, b) => {return b.date - a.date})
 
 	const [activeTabId, setActiveTabId] = useState(0);
 	const [tabFocus, setTabFocus] = useState(null);
@@ -235,8 +215,8 @@ function Jobs() {
 					onKeyDown={onKeyDown}
 				>
 					{jobsData &&
-						jobsData.map(({ node }, i) => {
-							const { company } = node.frontmatter;
+						jobsData.map((data, i) => {
+							const { company } = data;
 							return (
 								<li key={i}>
 									<StyledTabButton
@@ -260,9 +240,8 @@ function Jobs() {
 				</StyledTabList>
 
 				{jobsData &&
-					jobsData.map(({ node }, i) => {
-						const { frontmatter, html } = node;
-						const { title, url, company, range } = frontmatter;
+					jobsData.map((data, i) => {
+						const { title, url, company, range, content } = data;
 
 						return (
 							<CSSTransition
@@ -294,12 +273,13 @@ function Jobs() {
 
 									<p className="range">{range}</p>
 
-									{/* eslint-disable-next-line react/no-danger */}
 									<div
-										dangerouslySetInnerHTML={{
-											__html: html,
-										}}
-									/>
+										
+									>
+										<ul>
+											{content.map(temp => <li key={temp}>{ temp}</li>)}
+										</ul>
+									</div>
 								</StyledTabContent>
 							</CSSTransition>
 						);
