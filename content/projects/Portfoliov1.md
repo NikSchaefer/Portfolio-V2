@@ -1,14 +1,14 @@
 ---
-date: '2020-10'
-title: 'Portfolio V1'
-github: 'https://github.com/NikSchaefer/portfolio'
-external: ''
-ios: ''
-android: ''
+date: "2020-10"
+title: "Portfolio V1"
+github: "https://github.com/NikSchaefer/portfolio"
+external: ""
+ios: ""
+android: ""
 tech:
-  - React
-  - Typescript
-  - HTML + CSS
+    - React
+    - Typescript
+    - HTML + CSS
 showInProjects: true
 ---
 

@@ -1,11 +1,11 @@
 ---
-date: '2020-12-20'
-title: 'Get CSS fonts used'
-github: 'https://github.com/NikSchaefer/Get-CSS-Fonts-Used/tree/master'
-external: 'https://get-css-fonts.vercel.app/'
+date: "2020-12-20"
+title: "Get CSS fonts used"
+github: "https://github.com/NikSchaefer/Get-CSS-Fonts-Used/tree/master"
+external: "https://get-css-fonts.vercel.app/"
 tech:
-  - React
-  - Javascript
+    - React
+    - Javascript
 
 showInProjects: true
 ---

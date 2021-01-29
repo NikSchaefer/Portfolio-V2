@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-import PrismStyles from './PrismStyles';
-import TransitionStyles from './TransitionStyles';
+import PrismStyles from "./PrismStyles";
+import TransitionStyles from "./TransitionStyles";
 
 const GlobalStyle = createGlobalStyle`
 
