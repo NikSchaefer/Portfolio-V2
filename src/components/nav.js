@@ -7,6 +7,7 @@ import styled, { css } from "styled-components";
 
 import { navLinks } from "../config";
 import { useScrollDirection } from "../hooks";
+import { GlobalStyle, theme } from "../styles";
 import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";
 

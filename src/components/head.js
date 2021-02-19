@@ -1,13 +1,12 @@
+import HeadSeo from "next/head";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import React from "react";
-import { Helmet } from "react-helmet";
 
 import { siteMetadata } from "../config";
 
-function Head({ title, description, image }) {
-	const { pathname } = useRouter();
-
+function HeadExport({ title, description, image }) {
+	const router = useRouter();
 	const {
 		defaultTitle,
 		defaultDescription,
@@ -20,11 +19,11 @@ function Head({ title, description, image }) {
 		title: title || defaultTitle,
 		description: description || defaultDescription,
 		image: `${siteUrl}${image || defaultImage}`,
-		url: `${siteUrl}${pathname}`,
+		url: `${siteUrl}${router?.pathname}`,
 	};
 
 	return (
-		<Helmet
+		<HeadSeo
 			title={title}
 			defaultTitle={seo.title}
 			titleTemplate={`%s | ${defaultTitle}`}
@@ -50,20 +49,20 @@ function Head({ title, description, image }) {
 				name="google-site-verification"
 				content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk"
 			/>
-		</Helmet>
+		</HeadSeo>
 	);
 }
 
 // eslint-disable-next-line import/no-default-export
-export default Head;
+export default HeadExport;
 
-Head.propTypes = {
+HeadExport.propTypes = {
 	title: PropTypes.string,
 	description: PropTypes.string,
 	image: PropTypes.string,
 };
 
-Head.defaultProps = {
+HeadExport.defaultProps = {
 	title: null,
 	description: null,
 	image: null,

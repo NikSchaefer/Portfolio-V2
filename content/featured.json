@@ -2,7 +2,7 @@
 	{
 		"date": "17",
 		"title": "Developer Discords",
-		"cover": "devdiscords",
+		"cover": "discord.png",
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
@@ -12,7 +12,7 @@
 	{
 		"date": "20",
 		"title": "InstaDog",
-		"cover": "instadog",
+		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/InstaDog",
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
@@ -22,7 +22,7 @@
 	{
 		"date": "1",
 		"title": "CS Resources",
-		"cover": "csresources",
+		"cover": "csresources.png",
 		"github": "https://github.com/NikSchaefer/csnotes",
 		"external": "https://csresources.herokuapp.com/",
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
@@ -32,7 +32,7 @@
 	{
 		"date": "15",
 		"title": "Octo Stats",
-		"cover": "Octo",
+		"cover": "Octo.png",
 		"github": "https://github.com/NikSchaefer/Octo-Stats",
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],

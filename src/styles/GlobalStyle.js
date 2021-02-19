@@ -63,6 +63,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--slate);
     color: var(--lightest-slate);
   }
+pre {
+	background-color: rgb(238, 238, 238);
+	padding: 20px;
+}
+
+code {
+	background-color: rgb(238, 238, 238);
+}
 
   body {
     margin: 0;

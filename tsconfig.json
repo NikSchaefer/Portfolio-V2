@@ -31,7 +31,7 @@
 	"include": [
 		"**/*.ts",
 		"**/*.tsx",
-		"src/pages/_document.js",
+		"src/hooks/_document.js",
 		"src/pages/_error.js",
 		"src/lib/gtag.js",
 		"src/pages/index.js",

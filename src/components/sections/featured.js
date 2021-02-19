@@ -333,9 +333,11 @@ function Featured() {
 										}
 									>
 										<Image
-											layout='fill'
-											objectFit="true"
-											src={`/featured/${cover}.png`}
+											
+											height={300}
+											width={580}
+											lang="en-us"
+											src={`/featured/${cover}`}
 											alt={title}
 											className="img"
 										/>

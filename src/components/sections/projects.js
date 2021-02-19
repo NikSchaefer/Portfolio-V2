@@ -5,6 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
+import projectData from '../../../content/projects.json'
 import { srConfig } from "../../config";
 import { Icon } from "../icons";
 
@@ -135,30 +136,6 @@ const StyledProject = styled.div`
 `;
 
 function Projects() {
-	const data = useStaticQuery(graphql`
-		query {
-			projects: allMarkdownRemark(
-				filter: {
-					fileAbsolutePath: { regex: "/projects/" }
-					frontmatter: { showInProjects: { ne: false } }
-				}
-				sort: { fields: [frontmatter___date], order: ASC }
-			) {
-				edges {
-					node {
-						frontmatter {
-							title
-							tech
-							github
-							external
-						}
-						html
-					}
-				}
-			}
-		}
-	`);
-
 	const [showMore, setShowMore] = useState(false);
 	const revealTitle = useRef(null);
 	const revealArchiveLink = useRef(null);
@@ -173,7 +150,9 @@ function Projects() {
 	}, []);
 
 	const GRID_LIMIT = 6;
-	const projects = data.projects.edges.filter(({ node }) => node);
+	const projects = projectData.sort((a, b) => {
+		return a.index - b.index;
+	});
 	const firstSix = projects.slice(0, GRID_LIMIT);
 	const projectsToShow = showMore ? projects : firstSix;
 
@@ -182,10 +161,8 @@ function Projects() {
 			<h2 ref={revealTitle}>Other Noteworthy Projects</h2>
 
 			<TransitionGroup className="projects-grid">
-				{projectsToShow &&
-					projectsToShow.map(({ node }, i) => {
-						const { frontmatter, html } = node;
-						const { github, external, title, tech } = frontmatter;
+				{projectsToShow.map((data, i) => {
+						const { github, external, title, tech, text } = data;
 
 						return (
 							<CSSTransition
@@ -245,10 +222,9 @@ function Projects() {
 
 											<div
 												className="project-description"
-												dangerouslySetInnerHTML={{
-													__html: html,
-												}}
-											/>
+											>
+												<p>{text}</p>
+											</div>
 										</header>
 
 										<footer>
@@ -280,3 +256,4 @@ function Projects() {
 
 // eslint-disable-next-line import/no-default-export
 export default Projects;
+

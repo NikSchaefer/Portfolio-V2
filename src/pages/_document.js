@@ -1,3 +1,4 @@
+import HeadSeo from '@components/head'
 import { GA_TRACKING_ID } from "@src/config.js";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
@@ -31,48 +32,8 @@ export default class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="en-us">
+				<HeadSeo title="Nik Schaefer Portfolio" description="" image=""  />
 				<Head>
-					<meta
-						name="description"
-						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
-					/>
-
-					<meta
-						itemProp="name"
-						content="Nik Schaefer Portfolio"
-					/>
-					<meta
-						itemProp="description"
-						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
-					/>
-					<meta itemProp="image" content="/me.png" />
-
-					<meta
-						property="og:url"
-						content="https://boilerplate.nikschaefer.tech"
-					/>
-					<meta property="og:type" content="website" />
-					<meta
-						property="og:title"
-						content="Nik Schaefer Portfolio"
-					/>
-					<meta
-						property="og:description"
-						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
-					/>
-					<meta property="og:image" content="/me.png" />
-
-					<meta name="twitter:card" content="summary_large_image" />
-					<meta
-						name="twitter:title"
-						content="Nik Schaefer Portfolio"
-					/>
-					<meta
-						name="twitter:description"
-						content="Boilerplate built to scale containing Typescript + NextJS + Google Analytics + ESLint + Jest + Styled Components + Icons"
-					/>
-					<meta name="twitter:image" content="/me.png" />
-
 					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

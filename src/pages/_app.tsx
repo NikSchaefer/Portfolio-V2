@@ -1,9 +1,7 @@
 import { pageview } from "@lib/gtag";
 import type { AppProps } from "next/app";
-import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-
 // eslint-disable-next-line import/no-default-export
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	const router = useRouter();
@@ -17,13 +15,6 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 		};
 	}, [router.events]);
 	return (
-		<>
-			<Head>
-				<title>Nik Schaefer Portfolio</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-
-			<Component {...pageProps} />
-		</>
+		<Component {...pageProps} />
 	);
 }

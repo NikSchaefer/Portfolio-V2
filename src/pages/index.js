@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
@@ -15,24 +14,21 @@ import {
 const StyledMainContainer = styled.main`
 	counter-reset: section;
 `;
-function IndexPage({ location }) {
+function IndexPage()
+{
 	return (
-		<Layout location={location}>
+		<Layout>
 			<StyledMainContainer className="fillHeight">
 				<Hero />
 				<About />
 				<Jobs />
 				<Featured />
-				{/* <Projects /> */}
+				<Projects />
 				<Contact />
 			</StyledMainContainer>
 		</Layout>
 	);
 }
-
-IndexPage.propTypes = {
-	location: PropTypes.object.isRequired,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default IndexPage;
