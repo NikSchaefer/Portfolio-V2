@@ -151,7 +151,7 @@ const StyledLinks = styled.div`
 
 function Nav({ isHome }: { isHome: boolean }): JSX.Element {
 	const [isMounted, setIsMounted] = useState(!isHome);
-	const scrollDirection = useScrollDirection("down");
+	const scrollDirection = useScrollDirection();
 	const [scrolledToTop, setScrolledToTop] = useState(true);
 
 	const handleScroll = () => {
