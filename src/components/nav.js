@@ -140,7 +140,7 @@ function Nav({ isHome }) {
 
 	useEffect(() => {
 		const time = setTimeout(() => {
-			// setIsMounted(true);
+			setIsMounted(true);
 		}, 100);
 
 		window.addEventListener("scroll", handleScroll);

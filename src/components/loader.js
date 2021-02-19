@@ -3,7 +3,7 @@ import { IconLoader } from "@components/icons";
 import anime from "animejs";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import Head from "next/head";
 import styled from "styled-components";
 
 const StyledLoader = styled.div`
@@ -71,8 +71,8 @@ function Loader({ finishLoading }) {
 
 	return (
 		<StyledLoader className="loader" isMounted={isMounted}>
-			<Helmet bodyAttributes={{ class: `hidden` }} />
-
+			<Head bodyAttributes={{ class: `hidden` }} />
+			
 			<div className="logo-wrapper">
 				<IconLoader />
 			</div>

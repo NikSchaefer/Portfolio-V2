@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import { Link } from "next/link";
 import React, { useState, useEffect, useRef } from "react";
-import { Helmet } from "react-helmet";
+import Head from 'next/head';
 import styled from "styled-components";
 
 import { navLinks } from "../config";
@@ -249,9 +249,9 @@ function Menu() {
 
 	return (
 		<StyledMenu>
-			<Helmet>
+			<Head>
 				<body className={menuOpen ? "blur" : ""} />
-			</Helmet>
+			</Head>
 
 			<div ref={wrapperRef}>
 				<StyledHamburgerButton
