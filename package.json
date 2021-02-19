@@ -1,78 +1,48 @@
 {
-  "name": "v4",
-  "description": "Personal Website V4",
-  "version": "1.0.0",
-  "author": "Nik Schaefer <nikkschaefer@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bchiang7/v4"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "prettier --write"
-    ],
-    "*.js": [
-      "eslint --fix"
-    ]
-  },
-  "dependencies": {
-    "animejs": "^3.2.1",
-    "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.29.3",
-    "gatsby-image": "^2.10.0",
-    "gatsby-plugin-google-gtag": "^2.7.0",
-    "gatsby-plugin-manifest": "^2.11.0",
-    "gatsby-plugin-offline": "^3.9.0",
-    "gatsby-plugin-react-helmet": "^3.9.0",
-    "gatsby-plugin-robots-txt": "^1.5.5",
-    "gatsby-plugin-sharp": "^2.14.1",
-    "gatsby-plugin-sitemap": "^2.11.0",
-    "gatsby-plugin-styled-components": "^3.9.0",
-    "gatsby-remark-external-links": "0.0.4",
-    "gatsby-remark-images": "^3.10.0",
-    "gatsby-remark-prismjs": "^3.12.0",
-    "gatsby-source-filesystem": "^2.10.0",
-    "gatsby-transformer-remark": "^2.15.0",
-    "gatsby-transformer-sharp": "^2.11.0",
-    "lodash": "^4.17.20",
-    "prismjs": "^1.23.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0",
-    "react-transition-group": "^4.4.1",
-    "scrollreveal": "^4.0.7",
-    "smooth-scroll": "^16.1.0",
-    "styled-components": "^4.4.0"
-  },
-  "devDependencies": {
-    "@upstatement/eslint-config": "0.4.3",
-    "@upstatement/prettier-config": "^0.3.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.22.0",
-    "gatsby-remark-code-titles": "^1.1.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
-  }
+	"name": "my-app",
+	"version": "0.1.0",
+	"author": "Nik Schaefer <nikkschaefer@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NikSchaefer/"
+	},
+	"keywords": [
+		"NextJS"
+	],
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"clean": "npx prettier --write ."
+	},
+	"dependencies": {
+		"@babel/core": "^7.12.10",
+		"animejs": "^3.2.1",
+		"gray-matter": "^4.0.2",
+		"next": "10.0.5",
+		"next-mdx-remote": "^2.1.3",
+		"prismjs": "^1.23.0",
+		"prop-types": "^15.7.2",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-icons": "^4.1.0",
+		"react-transition-group": "^4.4.1",
+		"scrollreveal": "^4.0.7",
+		"smooth-scroll": "^16.1.3",
+		"styled-components": "^5.2.1",
+		"typescript": "^4.1.3"
+	},
+	"devDependencies": {
+		"@babel/preset-typescript": "^7.12.7",
+		"@types/babel__core": "^7.1.12",
+		"@types/node": "^14.14.22",
+		"@types/react": "^17.0.0",
+		"@types/react-transition-group": "^4.4.0",
+		"@types/styled-components": "^5.1.7",
+		"babel-plugin-styled-components": "^1.12.0",
+		"eslint": "^7.18.0",
+		"eslint-config-galex": "^2.10.5",
+		"prettier": "^2.2.1"
+	}
 }

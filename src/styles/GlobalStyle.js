@@ -1,6 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import TransitionStyles from './TransitionStyles';
-import PrismStyles from './PrismStyles';
+import { createGlobalStyle } from "styled-components";
+
+import PrismStyles from "./PrismStyles";
+import TransitionStyles from "./TransitionStyles";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -62,6 +63,14 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--slate);
     color: var(--lightest-slate);
   }
+pre {
+	background-color: rgb(238, 238, 238);
+	padding: 20px;
+}
+
+code {
+	background-color: rgb(238, 238, 238);
+}
 
   body {
     margin: 0;
@@ -420,4 +429,5 @@ const GlobalStyle = createGlobalStyle`
   ${PrismStyles};
 `;
 
+// eslint-disable-next-line import/no-default-export
 export default GlobalStyle;
