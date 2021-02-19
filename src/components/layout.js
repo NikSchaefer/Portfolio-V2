@@ -5,7 +5,7 @@ import styled, { ThemeProvider } from "styled-components";
 
 import { GlobalStyle, theme } from "../styles";
 
-import { Head, Loader, Nav, Social, Email, Footer } from ".";
+import { Loader, Nav, Social, Email, Footer } from ".";
 
 if (typeof window !== "undefined") {
 	// eslint-disable-next-line global-require
@@ -86,10 +86,7 @@ function Layout({ children }) {
 	}, []);
 
 	return (
-		<>
-			<Head />
-
-			<div id="root">
+		<div id="root">
 				<ThemeProvider theme={theme}>
 					<GlobalStyle />
 
@@ -113,7 +110,6 @@ function Layout({ children }) {
 					)}
 				</ThemeProvider>
 			</div>
-		</>
 	);
 }
 

@@ -1,7 +1,24 @@
-import HeadSeo from '@components/head'
 import { GA_TRACKING_ID } from "@src/config.js";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+
+import { siteMetadata } from "../config";
+
+const {
+	defaultTitle,
+	defaultDescription,
+	siteUrl,
+	defaultImage,
+	twitterUsername,
+} = siteMetadata;
+
+const seo = {
+	title: defaultTitle,
+	description: defaultDescription,
+	image: `${siteUrl}${defaultImage}`,
+	url: `${siteUrl}`,
+};
+
 // eslint-disable-next-line import/no-default-export
 export default class MyDocument extends Document {
 	static async getInitialProps(ctx) {
@@ -32,8 +49,7 @@ export default class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="en-us">
-				<HeadSeo title="Nik Schaefer Portfolio" description="" image=""  />
-				<Head>
+				<Head title={seo.title}>
 					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -51,6 +67,21 @@ export default class MyDocument extends Document {
           `,
 						}}
 					/>
+					<meta name="description" content={seo.description} />
+					<meta name="image" content={seo.image} />
+					<meta property="og:title" content={seo.title} />
+					<meta property="og:description" content={seo.description} />
+					<meta property="og:image" content={seo.image} />
+					<meta property="og:url" content={seo.url} />
+					<meta property="og:type" content="website" />
+					<meta name="twitter:card" content="summary_large_image" />
+					<meta name="twitter:creator" content={twitterUsername} />
+					<meta name="twitter:title" content={seo.title} />
+					<meta
+						name="twitter:description"
+						content={seo.description}
+					/>
+					<meta name="twitter:image" content={seo.image} />
 				</Head>
 				<body>
 					<Main />

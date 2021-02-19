@@ -1,18 +1,38 @@
 /* eslint-disable react/no-array-index-key */
-import { Link } from "next/link";
-import PropTypes from "prop-types";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled, { css } from "styled-components";
 
-import { navLinks } from "../config";
 import { useScrollDirection } from "../hooks";
-import { GlobalStyle, theme } from "../styles";
 import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";
 
 import { Menu } from ".";
 
+type Props = {
+	scrollDirection: string;
+	scrolledToTop: boolean;
+};
+
+const navLinks = [
+	{
+		name: "About",
+		url: "/#about",
+	},
+	{
+		name: "Experience",
+		url: "/#jobs",
+	},
+	{
+		name: "Work",
+		url: "/#projects",
+	},
+	{
+		name: "Contact",
+		url: "/#contact",
+	},
+];
 const StyledHeader = styled.header`
 	${({ theme }) => theme.mixins.flexBetween};
 	position: fixed;
@@ -28,7 +48,7 @@ const StyledHeader = styled.header`
 	backdrop-filter: blur(10px);
 	transition: var(--transition);
 
-	${(props) =>
+	${(props: Props) =>
 		props.scrollDirection === "up" &&
 		!props.scrolledToTop &&
 		css`
@@ -129,7 +149,7 @@ const StyledLinks = styled.div`
 	}
 `;
 
-function Nav({ isHome }) {
+function Nav({ isHome }: { isHome: boolean }): JSX.Element {
 	const [isMounted, setIsMounted] = useState(!isHome);
 	const scrollDirection = useScrollDirection("down");
 	const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -164,7 +184,7 @@ function Nav({ isHome }) {
 				<TransitionGroup component={null}>
 					{isMounted && (
 						<CSSTransition classNames={fadeClass} timeout={timeout}>
-							<div className="logo" tabIndex="-1">
+							<div className="logo" tabIndex={-1}>
 								{isHome ? (
 									<Link href="/">
 										<a aria-label="home">
@@ -185,8 +205,7 @@ function Nav({ isHome }) {
 					<ol>
 						<TransitionGroup component={null}>
 							{isMounted &&
-								navLinks &&
-								navLinks.map(({ url, name }, i) => (
+								navLinks?.map(({ url, name }, i) => (
 									<CSSTransition
 										key={i}
 										classNames={fadeDownClass}
@@ -200,7 +219,9 @@ function Nav({ isHome }) {
 												}ms`,
 											}}
 										>
-											<Link to={url}>{name}</Link>
+											<Link href={url}>
+												<a>{name}</a>
+											</Link>
 										</li>
 									</CSSTransition>
 								))}
@@ -219,10 +240,6 @@ function Nav({ isHome }) {
 		</StyledHeader>
 	);
 }
-
-Nav.propTypes = {
-	isHome: PropTypes.bool,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Nav;

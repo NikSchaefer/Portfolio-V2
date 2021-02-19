@@ -38,5 +38,5 @@
 		"src/components/sections/featured.",
 		"src/components/sections/featured.js",
 		"src/components/index.js"
-	]
+, "src/hooks/useScrollDirection.js"	]
 }
