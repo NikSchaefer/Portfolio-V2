@@ -177,14 +177,11 @@ function Menu(): JSX.Element {
 		setMenuOpen(!menuOpen);
 	};
 
-
-
 	const onResize = () => {
 		setMenuOpen(false);
 	};
 	useEffect(() => {
 		window.addEventListener("resize", onResize);
-
 
 		return () => {
 			window.removeEventListener("resize", onResize);
@@ -192,8 +189,7 @@ function Menu(): JSX.Element {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const wrapperRef =
-		useRef <any>();
+	const wrapperRef = useRef<any>();
 	useOnClickOutside(wrapperRef, () => {
 		setMenuOpen(false);
 	});
@@ -205,10 +201,7 @@ function Menu(): JSX.Element {
 			</Head>
 
 			<div ref={wrapperRef}>
-				<StyledHamburgerButton
-					onClick={toggleMenu}
-					menuOpen={menuOpen}
-				>
+				<StyledHamburgerButton onClick={toggleMenu} menuOpen={menuOpen}>
 					<div className="ham-box">
 						<div className="ham-box-inner" />
 					</div>
