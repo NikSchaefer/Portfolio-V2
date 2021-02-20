@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
 	}
 	render() {
 		return (
-			<Html lang="en-us">
+			<Html lang="en-us" title={seo.title}>
 				<Head title={seo.title}>
 					<script
 						async
@@ -67,7 +67,6 @@ export default class MyDocument extends Document {
           `,
 						}}
 					/>
-					<title>{seo.title}</title>
 					<meta name="description" content={seo.description} />
 					<meta name="image" content={seo.image} />
 					<meta property="og:title" content={seo.title} />
