@@ -72,14 +72,18 @@ export default class MyDocument extends Document {
 						content="tKabbDcLNnzaVk1PR4QNF6C0bzBSr1fV3GoTGeiWnlQ"
 					/>
 					<meta name="description" content={seo.description} />
-					<meta name="image" content={seo.image} />
+
+					<meta itemProp="name" content={seo.title} />
+					<meta itemProp="description" content={seo.description} />
+					<meta itemProp="image" content={seo.image} />
+
+					<meta property="og:url" content={seo.url} />
+					<meta property="og:type" content="website" />
 					<meta property="og:title" content={seo.title} />
 					<meta property="og:description" content={seo.description} />
 					<meta property="og:image" content={seo.image} />
-					<meta property="og:url" content={seo.url} />
-					<meta property="og:type" content="website" />
+
 					<meta name="twitter:card" content="summary_large_image" />
-					<meta name="twitter:creator" content={twitterUsername} />
 					<meta name="twitter:title" content={seo.title} />
 					<meta
 						name="twitter:description"
