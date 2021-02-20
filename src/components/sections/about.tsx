@@ -174,7 +174,7 @@ function About(): JSX.Element {
 					<div className="wrapper">
 						<Image
 							width={500}
-							height={500}
+							height={432}
 							src="/me.png"
 							alt="Avatar"
 							className="img"
