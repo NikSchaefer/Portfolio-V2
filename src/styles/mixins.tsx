@@ -1,5 +1,17 @@
 import { css } from "styled-components";
 
+type Mixins = {
+	flexBetween: typeof css;
+	flexCenter: typeof css;
+	link: typeof css;
+	inlineLink: typeof css;
+	button: typeof css;
+	smallButton: typeof css;
+	bigButton: typeof css;
+	boxShadow: typeof css;
+	fancyList: typeof css;
+};
+
 const button = css`
 	color: var(--green);
 	background-color: transparent;

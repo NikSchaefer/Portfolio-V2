@@ -113,11 +113,10 @@ const StyledPic = styled.div`
 	}
 `;
 
-function About() {
+function About(): JSX.Element {
 	const revealContainer = useRef(null);
 
-	useEffect(() =>
-	{
+	useEffect(() => {
 		sr.reveal(revealContainer.current, siteData.srConfig());
 	}, []);
 

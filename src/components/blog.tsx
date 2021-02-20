@@ -68,7 +68,7 @@ const Container = styled.section`
 	.more-button {
 		${({ theme }) => theme.mixins.button};
 		margin: 40px auto 0;
-		display:block;
+		display: block;
 	}
 `;
 
@@ -98,7 +98,7 @@ const StyledCard = styled.div`
 	width: 350px;
 	position: relative;
 	padding-bottom: 30px;
-	top:0;
+	top: 0;
 	transition: top ease 0.25s;
 	div {
 		box-sizing: border-box;

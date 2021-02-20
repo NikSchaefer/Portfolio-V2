@@ -41,19 +41,23 @@ const StyledHeroSection = styled.section`
 	}
 `;
 
-function Hero() {
+function Hero(): JSX.Element {
 	const [isMounted, setIsMounted] = useState(false);
 
 	useEffect(() => {
-		const timeout = setTimeout(() => setIsMounted(true), navDelay);
-		return () => clearTimeout(timeout);
+		const timeout = setTimeout(() => {
+			setIsMounted(true);
+		}, navDelay);
+		return () => {
+			clearTimeout(timeout);
+		};
 	}, []);
 
 	const one = <h1>Hi, my name is</h1>;
 	const two = <h2 className="big-heading">Nik Schaefer.</h2>;
 	const three = <h3 className="big-heading">I build things for the web.</h3>;
 	const four = (
-		<p style={{marginTop:'15px'}}>
+		<p style={{ marginTop: "15px" }}>
 			I'm a self-taught full-stack developer and hobbyist programmer
 			student specializing in React and Django.
 		</p>

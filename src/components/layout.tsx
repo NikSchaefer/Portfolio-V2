@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { useRouter } from "next/router";
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import { GlobalStyle, theme } from "../styles";
-import Nav from './nav'
+import Nav from "./nav";
 
 import { Loader, Social, Email, Footer } from ".";
 
@@ -61,62 +61,45 @@ const handleExternalLinks = () => {
 };
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-function Layout({ children }) {
+function Layout({ children }: { children: React.ReactNode }): JSX.Element {
 	const router = useRouter();
 	const isHome = router.pathname === "/";
 	const [isLoading, setIsLoading] = useState(isHome);
-
-	useEffect(() => {
-		if (isLoading) {
-			return;
-		}
-		if (router.hash) {
-			const id = router.hash.slice(1);
-			setTimeout(() => {
-				const el = document.querySelector(`#${id}`);
-				if (el) {
-					el.scrollIntoView();
-					el.focus();
-				}
-			}, 0);
-		}
-	}, [isLoading, router.hash]);
-
 	useEffect(() => {
 		handleExternalLinks();
 	}, []);
 
 	return (
 		<div id="root">
-				<ThemeProvider theme={theme}>
-					<GlobalStyle />
+			<ThemeProvider theme={theme}>
+				<GlobalStyle />
 
-					<SkipToContentLink href="#content">
-						Skip to Content
-					</SkipToContentLink>
+				<SkipToContentLink href="#content">
+					Skip to Content
+				</SkipToContentLink>
 
-					{isLoading && isHome ? (
-						<Loader finishLoading={() => setIsLoading(false)} />
-					) : (
-						<StyledContent>
-							<Nav isHome={isHome} />
-							<Social isHome={isHome} />
-							<Email isHome={isHome} />
+				{isLoading && isHome ? (
+					<Loader
+						finishLoading={() => {
+							setIsLoading(false);
+						}}
+					/>
+				) : (
+					<StyledContent>
+						<Nav isHome={isHome} />
+						<Social isHome={isHome} />
+						<Email isHome={isHome} />
 
-							<div id="content">
-								{children}
-								<Footer />
-							</div>
-						</StyledContent>
-					)}
-				</ThemeProvider>
-			</div>
+						<div id="content">
+							{children}
+							<Footer />
+						</div>
+					</StyledContent>
+				)}
+			</ThemeProvider>
+		</div>
 	);
 }
-
-Layout.propTypes = {
-	children: PropTypes.node.isRequired,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Layout;

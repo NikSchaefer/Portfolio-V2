@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled, { css } from "styled-components";
 
-import { siteData } from '../config'
+import { siteData } from "../config";
 import { useScrollDirection } from "../hooks";
 import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";

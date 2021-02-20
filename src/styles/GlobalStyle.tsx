@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-import PrismStyles from "./PrismStyles";
 import TransitionStyles from "./TransitionStyles";
+import mixins from "./mixins";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -283,7 +283,7 @@ code {
     }
 
     &.inline-link {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
     }
   }
 
@@ -317,7 +317,7 @@ code {
     }
 
     & > a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
     }
 
     & > code {
@@ -404,7 +404,7 @@ code {
     }
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
       line-height: 1.5;
     }
   }
@@ -422,7 +422,7 @@ code {
     }
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
       font-family: var(--font-mono);
       font-size: var(--fz-sm);
       font-weight: 600;
@@ -431,14 +431,9 @@ code {
       letter-spacing: 0.1em;
     }
   }
-
-  .gatsby-image-outer-wrapper {
-    height: 100%;
-  }
-
+  
   ${TransitionStyles};
 
-  ${PrismStyles};
 `;
 
 // eslint-disable-next-line import/no-default-export

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 // google analytics mearsurement id
 const GA_TRACKING_ID = "U-XXXXXX";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
@@ -10,7 +11,7 @@ export const siteData = {
 	siteMetadata: {
 		title: "Nik Schaefer Portfolio",
 		description:
-			"I am a self- taught full- stack developer and hobbyist programmer student specializing in React and Django",
+			"I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US. I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. In my free time I like to be contributing to open source projects, building my own projects, and further my education.",
 		siteUrl: "https://nikschaefer.tech", // No trailing slash allowed!
 		image: "/me.png",
 		twitterUsername: "@NikSchaefer_",

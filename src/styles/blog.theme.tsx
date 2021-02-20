@@ -28,7 +28,8 @@ const Content = styled.section`
 	h5 {
 		font-weight: 600;
 	}
-	pre, code {
+	pre,
+	code {
 		background-color: var(--light-navy);
 		color: var(--white);
 		font-size: var(--fz-sm);
@@ -45,7 +46,7 @@ const Content = styled.section`
 	}
 	img {
 		width: 99%;
-		margin-bottom:40px;
+		margin-bottom: 40px;
 	}
 `;
 const StyledTitle = styled.h1`

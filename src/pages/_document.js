@@ -1,4 +1,4 @@
-import { GA_TRACKING_ID } from "@src/config.js";
+import { GA_TRACKING_ID } from "@src/config.ts";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 

@@ -1,17 +1,20 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
 import { loaderDelay } from "../utils";
 
+type Props = {
+	orientation: string;
+};
 const StyledSideElement = styled.div`
 	width: 40px;
 	position: fixed;
 	bottom: 0;
-	left: ${(props) => (props.orientation === "left" ? "40px" : "auto")};
-	right: ${(props) => (props.orientation === "left" ? "auto" : "40px")};
+	left: ${(props: Props) => (props.orientation === "left" ? "40px" : "auto")};
+	right: ${(props: Props) =>
+		props.orientation === "left" ? "auto" : "40px"};
 	z-index: 10;
 	color: var(--light-slate);
 
@@ -25,15 +28,27 @@ const StyledSideElement = styled.div`
 	}
 `;
 
-function Side({ children, isHome, orientation }) {
+function Side({
+	children,
+	isHome,
+	orientation,
+}: {
+	isHome: boolean;
+	orientation: string;
+	children: React.ReactNode;
+}): JSX.Element {
 	const [isMounted, setIsMounted] = useState(!isHome);
 
 	useEffect(() => {
 		if (!isHome) {
 			return;
 		}
-		const timeout = setTimeout(() => setIsMounted(true), loaderDelay);
-		return () => clearTimeout(timeout);
+		const timeout = setTimeout(() => {
+			setIsMounted(true);
+		}, loaderDelay);
+		return () => {
+			clearTimeout(timeout);
+		};
 	}, []);
 
 	return (
@@ -51,12 +66,6 @@ function Side({ children, isHome, orientation }) {
 		</StyledSideElement>
 	);
 }
-
-Side.propTypes = {
-	children: PropTypes.node.isRequired,
-	isHome: PropTypes.bool,
-	orientation: PropTypes.string,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Side;

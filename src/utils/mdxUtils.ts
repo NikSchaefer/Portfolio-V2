@@ -11,8 +11,7 @@ export const postFilePaths = fs
 	// Only include md(x) files
 	.filter((path) => /\.mdx?$/.test(path));
 
-export const POSTS_PATH_PROJECT = path.join(process.cwd(), "content/projects")
+export const POSTS_PATH_PROJECT = path.join(process.cwd(), "content/projects");
 export const postFilePathsProject = fs
 	.readdirSync(POSTS_PATH)
 	.filter((path) => /\.mdx?$/.test(path));
-

@@ -1,13 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react/no-array-index-key */
-import Head from 'next/head';
+import Head from "next/head";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import { siteData } from "../config";
 import { useOnClickOutside } from "../hooks";
-import { KEY_CODES } from "../utils";
 
+type Props = {
+	menuOpen: boolean;
+};
 const StyledMenu = styled.div`
 	display: none;
 
@@ -50,8 +53,11 @@ const StyledHamburgerButton = styled.button`
 		background-color: var(--green);
 		transition-duration: 0.22s;
 		transition-property: transform;
-		transition-delay: ${(props) => (props.menuOpen ? `0.12s` : `0s`)};
-		transform: rotate(${(props) => (props.menuOpen ? `225deg` : `0deg`)});
+		transition-delay: ${(props: Props) =>
+			props.menuOpen ? `0.12s` : `0s`};
+		transform: rotate(
+			${(props: Props) => (props.menuOpen ? `225deg` : `0deg`)}
+		);
 		transition-timing-function: cubic-bezier(
 			${(props) =>
 				props.menuOpen
@@ -106,8 +112,11 @@ const StyledSidebar = styled.aside`
 		background-color: var(--light-navy);
 		box-shadow: -10px 0px 30px -15px var(--navy-shadow);
 		z-index: 9;
-		transform: translateX(${(props) => (props.menuOpen ? 0 : 100)}vw);
-		visibility: ${(props) => (props.menuOpen ? "visible" : "hidden")};
+		transform: translateX(
+			${(props: Props) => (props.menuOpen ? 0 : 100)}vw
+		);
+		visibility: ${(props: Props) =>
+			props.menuOpen ? "visible" : "hidden"};
 		transition: var(--transition);
 	}
 
@@ -161,90 +170,33 @@ const StyledSidebar = styled.aside`
 `;
 
 // eslint-disable-next-line sonarjs/cognitive-complexity
-function Menu() {
+function Menu(): JSX.Element {
 	const [menuOpen, setMenuOpen] = useState(false);
 
-	const toggleMenu = () => setMenuOpen(!menuOpen);
-
-	const buttonRef = useRef(null);
-	const navRef = useRef(null);
-
-	let menuFocusables;
-	let firstFocusableEl;
-	let lastFocusableEl;
-
-	const setFocusables = () => {
-		menuFocusables = [
-			buttonRef.current,
-			...[...navRef.current.querySelectorAll("a")],
-		];
-		// eslint-disable-next-line prefer-destructuring
-		firstFocusableEl = menuFocusables[0];
-		lastFocusableEl = menuFocusables[menuFocusables.length - 1];
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen);
 	};
 
-	const handleBackwardTab = (e) => {
-		if (document.activeElement === firstFocusableEl) {
-			e.preventDefault();
-			lastFocusableEl.focus();
-		}
+
+
+	const onResize = () => {
+		setMenuOpen(false);
 	};
-
-	const handleForwardTab = (e) => {
-		if (document.activeElement === lastFocusableEl) {
-			e.preventDefault();
-			firstFocusableEl.focus();
-		}
-	};
-
-	const onKeyDown = (e) => {
-		switch (e.key) {
-			case KEY_CODES.ESCAPE:
-			case KEY_CODES.ESCAPE_IE11: {
-				setMenuOpen(false);
-				break;
-			}
-
-			case KEY_CODES.TAB: {
-				if (menuFocusables && menuFocusables.length === 1) {
-					e.preventDefault();
-					break;
-				}
-				if (e.shiftKey) {
-					handleBackwardTab(e);
-				} else {
-					handleForwardTab(e);
-				}
-				break;
-			}
-
-			default: {
-				break;
-			}
-		}
-	};
-
-	const onResize = (e) => {
-		if (e.currentTarget.innerWidth > 768) {
-			setMenuOpen(false);
-		}
-	};
-
 	useEffect(() => {
-		document.addEventListener("keydown", onKeyDown);
 		window.addEventListener("resize", onResize);
 
-		setFocusables();
 
 		return () => {
-			document.removeEventListener("keydown", onKeyDown);
 			window.removeEventListener("resize", onResize);
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	const wrapperRef = useRef();
-	useOnClickOutside(wrapperRef, () => setMenuOpen(false));
+	const wrapperRef =
+		useRef <any>();
+	useOnClickOutside(wrapperRef, () => {
+		setMenuOpen(false);
+	});
 
 	return (
 		<StyledMenu>
@@ -256,7 +208,6 @@ function Menu() {
 				<StyledHamburgerButton
 					onClick={toggleMenu}
 					menuOpen={menuOpen}
-					ref={buttonRef}
 				>
 					<div className="ham-box">
 						<div className="ham-box-inner" />
@@ -268,7 +219,7 @@ function Menu() {
 					aria-hidden={!menuOpen}
 					tabIndex={menuOpen ? 1 : -1}
 				>
-					<nav ref={navRef}>
+					<nav>
 						{siteData.navLinks && (
 							<ol>
 								{siteData.navLinks.map(({ url, name }, i) => (

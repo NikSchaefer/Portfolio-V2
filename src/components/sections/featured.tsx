@@ -250,15 +250,21 @@ const StyledProject = styled.div`
 `;
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function Featured() {
-	const featuredProjects = jsonData.sort((a, b) => {return a.date - b.date});
+function Featured(): JSX.Element {
+	const featuredProjects = jsonData.sort((a, b) => {
+		return Number(a.date) - Number(b.date);
+	});
 
 	const revealTitle = useRef(null);
-	const revealProjects = useRef([]);
+	const revealProjects = useRef<HTMLDivElement[] | null[]>([]);
 	useEffect(() => {
 		sr.reveal(revealTitle.current, siteData.srConfig());
-		revealProjects.current.forEach((ref, i) =>
-			sr.reveal(ref, siteData.srConfig(i * 100))
+		revealProjects.current.forEach(
+			(ref: HTMLDivElement | null, i: number) => {
+				if (ref !== null) {
+					sr.reveal(ref, siteData.srConfig(i * 100));
+				}
+			}
 		);
 	}, []);
 
@@ -333,7 +339,6 @@ function Featured() {
 										}
 									>
 										<Image
-											
 											height={300}
 											width={580}
 											lang="en-us"

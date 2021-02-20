@@ -9,7 +9,7 @@ import {
 	Featured,
 	Projects,
 	Contact,
-	Blog
+	Blog,
 } from "../components";
 
 const StyledMainContainer = styled.main`

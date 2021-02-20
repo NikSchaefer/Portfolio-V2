@@ -1,10 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { IconLoader } from "@components/icons";
 import anime from "animejs";
-import Head from "next/head";
-import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
+type Props = {
+	isMounted: boolean;
+};
 
 const StyledLoader = styled.div`
 	${({ theme }) => theme.mixins.flexCenter};
@@ -22,7 +24,7 @@ const StyledLoader = styled.div`
 		width: max-content;
 		max-width: 100px;
 		transition: var(--transition);
-		opacity: ${(props) => (props.isMounted ? 1 : 0)};
+		opacity: ${(props: Props) => (props.isMounted ? 1 : 0)};
 		svg {
 			display: block;
 			width: 100%;
@@ -37,7 +39,7 @@ const StyledLoader = styled.div`
 	}
 `;
 
-function Loader({ finishLoading }) {
+function Loader({ finishLoading }: { finishLoading: Function }): JSX.Element {
 	const animate = () => {
 		const loader = anime.timeline({
 			complete: () => finishLoading(),
@@ -64,25 +66,23 @@ function Loader({ finishLoading }) {
 	const [isMounted, setIsMounted] = useState(false);
 
 	useEffect(() => {
-		const timeout = setTimeout(() => setIsMounted(true), 10);
+		const timeout = setTimeout(() => {
+			setIsMounted(true);
+		}, 10);
 		animate();
-		return () => clearTimeout(timeout);
+		return () => {
+			clearTimeout(timeout);
+		};
 	}, []);
 
 	return (
 		<StyledLoader className="loader" isMounted={isMounted}>
-			<Head bodyAttributes={{ class: `hidden` }} />
-			
 			<div className="logo-wrapper">
 				<IconLoader />
 			</div>
 		</StyledLoader>
 	);
 }
-
-Loader.propTypes = {
-	finishLoading: PropTypes.func.isRequired,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Loader;

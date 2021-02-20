@@ -42,9 +42,12 @@ const StyledContactSection = styled.section`
 `;
 
 // eslint-disable-next-line import/no-default-export
-export default function Contact() {
+export default function Contact(): JSX.Element {
 	const revealContainer = useRef(null);
-	useEffect(() => sr.reveal(revealContainer.current, siteData.srConfig()), []);
+	useEffect(
+		() => sr.reveal(revealContainer.current, siteData.srConfig()),
+		[]
+	);
 
 	return (
 		<StyledContactSection id="contact" ref={revealContainer}>

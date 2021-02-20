@@ -4,10 +4,15 @@ import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
-import jsonData from '../../../content/jobs.json'
+import jsonData from "../../../content/jobs.json";
 import { siteData } from "../../config";
 import { KEY_CODES } from "../../utils";
 import sr from "../../utils/sr";
+
+type Props = {
+	isActive?: boolean;
+	activeTabId?: number;
+};
 
 const StyledJobsSection = styled.section`
 	max-width: 700px;
@@ -70,7 +75,8 @@ const StyledTabButton = styled.button`
 	padding: 0 20px 2px;
 	border-left: 2px solid var(--lightest-navy);
 	background-color: transparent;
-	color: ${({ isActive }) => (isActive ? "var(--green)" : "var(--slate)")};
+	color: ${({ isActive }: Props) =>
+		isActive ? "var(--green)" : "var(--slate)"};
 	font-family: var(--font-mono);
 	font-size: var(--fz-xs);
 	text-align: left;
@@ -104,7 +110,7 @@ const StyledHighlight = styled.div`
 	border-radius: var(--border-radius);
 	background: var(--green);
 	transform: translateY(
-		calc(${({ activeTabId }) => activeTabId} * var(--tab-height))
+		calc(${({ activeTabId }: Props) => activeTabId} * var(--tab-height))
 	);
 	transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 	transition-delay: 0.1s;
@@ -160,20 +166,27 @@ const StyledTabContent = styled.div`
 	}
 `;
 
-function Jobs() {
-
-	const jobsData = jsonData.sort((a, b) => {return b.date - a.date})
+function Jobs(): JSX.Element {
+	const jobsData = jsonData.sort((a, b) => {
+		return new Date(b.date).getTime() - new Date(a.date).getTime();
+	});
 
 	const [activeTabId, setActiveTabId] = useState(0);
-	const [tabFocus, setTabFocus] = useState(null);
-	const tabs = useRef([]);
+	const [tabFocus, setTabFocus] = useState(0);
+	const tabs = useRef<HTMLDivElement[] | null[] | HTMLButtonElement[]>([]);
 
 	const revealContainer = useRef(null);
-	useEffect(() => sr.reveal(revealContainer.current, siteData.srConfig()), []);
+	useEffect(
+		() => sr.reveal(revealContainer.current, siteData.srConfig()),
+		[]
+	);
 
 	const focusTab = () => {
+		if (tabs.current[tabFocus] === null) {
+			return;
+		}
 		if (tabs.current[tabFocus]) {
-			tabs.current[tabFocus].focus();
+			tabs.current[tabFocus]?.focus();
 			return;
 		}
 		// If we're at the end, go to the start
@@ -187,10 +200,12 @@ function Jobs() {
 	};
 
 	// Only re-run the effect if tabFocus changes
-	useEffect(() => focusTab(), [tabFocus]);
+	useEffect(() => {
+		focusTab();
+	}, [tabFocus]);
 
 	// Focus on tabs when using up & down arrow keys
-	const onKeyDown = (e) => {
+	const onKeyDown = (e: React.KeyboardEvent) => {
 		if (e.key === KEY_CODES.ARROW_UP || e.key === KEY_CODES.ARROW_DOWN) {
 			e.preventDefault();
 			// Move up
@@ -221,15 +236,15 @@ function Jobs() {
 								<li key={i}>
 									<StyledTabButton
 										isActive={activeTabId === i}
-										onClick={() => setActiveTabId(i)}
+										onClick={() => {
+											setActiveTabId(i);
+										}}
 										ref={(el) => (tabs.current[i] = el)}
 										id={`tab-${i}`}
 										role="tab"
 										aria-selected={activeTabId === i}
 										aria-controls={`panel-${i}`}
-										tabIndex={
-											activeTabId === i ? "0" : "-1"
-										}
+										tabIndex={activeTabId === i ? 0 : -1}
 									>
 										<span>{company}</span>
 									</StyledTabButton>
@@ -253,7 +268,7 @@ function Jobs() {
 								<StyledTabContent
 									id={`panel-${i}`}
 									role="tabpanel"
-									tabIndex={activeTabId === i ? "0" : "-1"}
+									tabIndex={activeTabId === i ? 0 : -1}
 									aria-labelledby={`tab-${i}`}
 									aria-hidden={activeTabId !== i}
 									hidden={activeTabId !== i}
@@ -273,11 +288,11 @@ function Jobs() {
 
 									<p className="range">{range}</p>
 
-									<div
-										
-									>
+									<div>
 										<ul>
-											{content.map(temp => <li key={temp}>{ temp}</li>)}
+											{content.map((temp) => (
+												<li key={temp}>{temp}</li>
+											))}
 										</ul>
 									</div>
 								</StyledTabContent>

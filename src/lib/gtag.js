@@ -1,4 +1,4 @@
-import { GA_TRACKING_ID } from "@src/config.js";
+import { GA_TRACKING_ID } from "@src/config.ts";
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {

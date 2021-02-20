@@ -35,11 +35,13 @@ const StyledLinkWrapper = styled.div`
 	}
 `;
 
-function Email({ isHome }: {isHome:boolean}): JSX.Element {
+function Email({ isHome }: { isHome: boolean }): JSX.Element {
 	return (
 		<Side isHome={isHome} orientation="right">
 			<StyledLinkWrapper>
-				<a href={`mailto:${String(siteData.email)}`}>{siteData.email}</a>
+				<a href={`mailto:${String(siteData.email)}`}>
+					{siteData.email}
+				</a>
 			</StyledLinkWrapper>
 		</Side>
 	);
