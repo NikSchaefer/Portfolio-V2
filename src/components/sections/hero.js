@@ -53,7 +53,7 @@ function Hero() {
 	const two = <h2 className="big-heading">Nik Schaefer.</h2>;
 	const three = <h3 className="big-heading">I build things for the web.</h3>;
 	const four = (
-		<p>
+		<p style={{marginTop:'15px'}}>
 			I'm a self-taught full-stack developer and hobbyist programmer
 			student specializing in React and Django.
 		</p>

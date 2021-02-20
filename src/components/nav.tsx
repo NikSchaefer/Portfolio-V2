@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled, { css } from "styled-components";
 
+import { siteData } from '../config'
 import { useScrollDirection } from "../hooks";
 import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";
@@ -14,24 +15,6 @@ type Props = {
 	scrolledToTop: boolean;
 };
 
-const navLinks = [
-	{
-		name: "About",
-		url: "/#about",
-	},
-	{
-		name: "Experience",
-		url: "/#jobs",
-	},
-	{
-		name: "Work",
-		url: "/#projects",
-	},
-	{
-		name: "Contact",
-		url: "/#contact",
-	},
-];
 const StyledHeader = styled.header`
 	${({ theme }) => theme.mixins.flexBetween};
 	position: fixed;
@@ -184,11 +167,11 @@ function Nav({ isHome }: { isHome: boolean }): JSX.Element {
 					{isMounted && (
 						<CSSTransition classNames={fadeClass} timeout={timeout}>
 							<div className="logo" tabIndex={-1}>
-									<Link href="/">
-										<a aria-label="home">
-											<IconLogo />
-										</a>
-									</Link>
+								<Link href="/">
+									<a aria-label="home">
+										<IconLogo />
+									</a>
+								</Link>
 							</div>
 						</CSSTransition>
 					)}
@@ -198,7 +181,7 @@ function Nav({ isHome }: { isHome: boolean }): JSX.Element {
 					<ol>
 						<TransitionGroup component={null}>
 							{isMounted &&
-								navLinks?.map(({ url, name }, i) => (
+								siteData.navLinks?.map(({ url, name }, i) => (
 									<CSSTransition
 										key={i}
 										classNames={fadeDownClass}

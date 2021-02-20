@@ -71,7 +71,7 @@ export default function Footer(): JSX.Element {
 
 			<StyledCredit tabIndex={-1}>
 				<a href="/#">
-					<div>Back to Top</div>
+					<div>Developed in NextJS by Nik Schaefer</div>
 				</a>
 			</StyledCredit>
 		</StyledFooter>
