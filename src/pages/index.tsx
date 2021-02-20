@@ -9,6 +9,7 @@ import {
 	Featured,
 	Projects,
 	Contact,
+	Blog
 } from "../components";
 
 const StyledMainContainer = styled.main`
@@ -23,6 +24,7 @@ function IndexPage(): JSX.Element {
 				<Jobs />
 				<Featured />
 				<Projects />
+				<Blog />
 				<Contact />
 			</StyledMainContainer>
 		</Layout>

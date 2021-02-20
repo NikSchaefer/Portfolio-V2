@@ -52,6 +52,18 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     width: 100%;
   }
+body::-webkit-scrollbar {
+	width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+	border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: var(--green);
+	border-radius: 80px;
+}
 
   *,
   *:before,
