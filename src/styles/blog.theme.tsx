@@ -45,6 +45,7 @@ const Content = styled.section`
 	}
 	img {
 		width: 99%;
+		margin-bottom:40px;
 	}
 `;
 const StyledTitle = styled.h1`
