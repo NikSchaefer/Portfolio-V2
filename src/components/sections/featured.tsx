@@ -330,6 +330,7 @@ function Featured(): JSX.Element {
 
 								<div className="project-image">
 									<a
+										aria-label={`${title} Link to Project`}
 										href={
 											external
 												? external

@@ -67,6 +67,10 @@ export default class MyDocument extends Document {
           `,
 						}}
 					/>
+					<meta
+						name="google-site-verification"
+						content="tKabbDcLNnzaVk1PR4QNF6C0bzBSr1fV3GoTGeiWnlQ"
+					/>
 					<meta name="description" content={seo.description} />
 					<meta name="image" content={seo.image} />
 					<meta property="og:title" content={seo.title} />

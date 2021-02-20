@@ -20,10 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
 		<>
 			<Head>
-				<title>
-					{" "}
-					<title>{siteData.siteMetadata.title}</title>
-				</title>
+				<title>{siteData.siteMetadata.title}</title>
 			</Head>
 			<Component {...pageProps} />
 		</>
