@@ -149,7 +149,7 @@ export default function BlogHome(): JSX.Element {
 	}, []);
 
 	return (
-		<Container id="Blog">
+		<Container id="blog">
 			<Meta>
 				<h2 className="numbered-heading" ref={revealTitle}>
 					My Personal Blog

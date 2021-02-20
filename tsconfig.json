@@ -5,7 +5,7 @@
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
 		"jsx": "preserve",
-		"lib": ["dom", "esnext", "dom.iterable"],
+		"lib": ["dom", "esnext"],
 		"module": "esnext",
 		"target": "esnext",
 		"moduleResolution": "node",
@@ -31,16 +31,6 @@
 	"include": [
 		"**/*.ts",
 		"**/*.tsx",
-		"src/hooks/_document.js",
-		"src/pages/_error.js",
-		"src/lib/gtag.js",
-		"src/pages/index.tsx",
-		"src/components/sections/featured.",
-		"src/components/sections/featured.tsx",
-		"src/components/index.tsx",
-		"src/hooks/useScrollDirection.js",
-		"src/components/side.tsx",
-		"src/components/social.js",
-		"src/components/menu.js"
+		"src/pages/_document.js",
 	]
 }

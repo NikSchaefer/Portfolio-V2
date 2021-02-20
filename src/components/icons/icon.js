@@ -7,7 +7,6 @@ import {
 	IconLogo,
 	IconZap,
 } from "@components/icons";
-import PropTypes from "prop-types";
 import React from "react";
 
 function Icon({ name }) {
@@ -28,10 +27,6 @@ function Icon({ name }) {
 			return <IconExternal />;
 	}
 }
-
-Icon.propTypes = {
-	name: PropTypes.string.isRequired,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Icon;
