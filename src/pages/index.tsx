@@ -14,8 +14,7 @@ import {
 const StyledMainContainer = styled.main`
 	counter-reset: section;
 `;
-function IndexPage()
-{
+function IndexPage(): JSX.Element {
 	return (
 		<Layout>
 			<StyledMainContainer className="fillHeight">

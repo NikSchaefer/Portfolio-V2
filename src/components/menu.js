@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
-import { Link } from "next/link";
-import React, { useState, useEffect, useRef } from "react";
 import Head from 'next/head';
+import Link from "next/link";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
-import { navLinks } from "../config";
+import { siteData } from "../config";
 import { useOnClickOutside } from "../hooks";
 import { KEY_CODES } from "../utils";
 
@@ -15,7 +15,6 @@ const StyledMenu = styled.div`
 		display: block;
 	}
 `;
-
 const StyledHamburgerButton = styled.button`
 	display: none;
 
@@ -270,9 +269,9 @@ function Menu() {
 					tabIndex={menuOpen ? 1 : -1}
 				>
 					<nav ref={navRef}>
-						{navLinks && (
+						{siteData.navLinks && (
 							<ol>
-								{navLinks.map(({ url, name }, i) => (
+								{siteData.navLinks.map(({ url, name }, i) => (
 									<li key={i}>
 										<Link href={url}>{name}</Link>
 									</li>

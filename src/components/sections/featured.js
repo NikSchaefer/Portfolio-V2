@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import jsonData from "../../../content/featured.json";
-import { srConfig } from "../../config";
+import { siteData } from "../../config";
 import sr from "../../utils/sr";
 import { Icon } from "../icons";
 
@@ -256,9 +256,9 @@ function Featured() {
 	const revealTitle = useRef(null);
 	const revealProjects = useRef([]);
 	useEffect(() => {
-		sr.reveal(revealTitle.current, srConfig());
+		sr.reveal(revealTitle.current, siteData.srConfig());
 		revealProjects.current.forEach((ref, i) =>
-			sr.reveal(ref, srConfig(i * 100))
+			sr.reveal(ref, siteData.srConfig(i * 100))
 		);
 	}, []);
 

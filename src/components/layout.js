@@ -4,8 +4,9 @@ import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import { GlobalStyle, theme } from "../styles";
+import Nav from './nav'
 
-import { Loader, Nav, Social, Email, Footer } from ".";
+import { Loader, Social, Email, Footer } from ".";
 
 if (typeof window !== "undefined") {
 	// eslint-disable-next-line global-require

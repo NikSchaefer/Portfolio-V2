@@ -2,7 +2,7 @@ import sr from "@utils/sr";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
-import { srConfig, email } from "../../config";
+import { siteData } from "../../config";
 
 const StyledContactSection = styled.section`
 	max-width: 400px;
@@ -44,7 +44,7 @@ const StyledContactSection = styled.section`
 // eslint-disable-next-line import/no-default-export
 export default function Contact() {
 	const revealContainer = useRef(null);
-	useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
+	useEffect(() => sr.reveal(revealContainer.current, siteData.srConfig()), []);
 
 	return (
 		<StyledContactSection id="contact" ref={revealContainer}>
@@ -57,7 +57,7 @@ export default function Contact() {
 				anything else, my inbox is always open. Say Hello!
 			</p>
 
-			<a className="email-link" href={`mailto:${email}`}>
+			<a className="email-link" href={`mailto:${siteData.email}`}>
 				Say Hello
 			</a>
 		</StyledContactSection>

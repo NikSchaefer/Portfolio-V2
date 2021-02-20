@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { IconLoader } from "@components/icons";
 import anime from "animejs";
+import Head from "next/head";
 import PropTypes from "prop-types";
 import React, { useState, useEffect } from "react";
-import Head from "next/head";
 import styled from "styled-components";
 
 const StyledLoader = styled.div`

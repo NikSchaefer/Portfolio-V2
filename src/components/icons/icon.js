@@ -24,8 +24,6 @@ function Icon({ name }) {
 			return <IconLoader />;
 		case "Logo":
 			return <IconLogo />;
-		case "PlayStore":
-			return <IconZap />;
 		default:
 			return <IconExternal />;
 	}

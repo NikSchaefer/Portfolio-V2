@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
-import { email } from "../../config";
+import { siteData } from "../../config";
 import { navDelay, loaderDelay } from "../../utils";
 
 const StyledHeroSection = styled.section`
@@ -59,7 +59,7 @@ function Hero() {
 		</p>
 	);
 	const five = (
-		<a href={`mailto:${email}`} className="email-link">
+		<a href={`mailto:${siteData.email}`} className="email-link">
 			Get In Touch
 		</a>
 	);

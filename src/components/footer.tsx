@@ -4,7 +4,7 @@ import { Icon } from "@components/icons";
 import React from "react";
 import styled from "styled-components";
 
-import { socialMedia } from "../config";
+import { siteData } from "../config";
 import { mixins } from "../styles";
 
 const StyledFooter = styled.footer`
@@ -52,23 +52,24 @@ const StyledCredit = styled.div`
 `;
 
 // eslint-disable-next-line import/no-default-export
-export default function Footer() {
+export default function Footer(): JSX.Element {
 	return (
 		<StyledFooter>
 			<StyledSocialLinks>
 				<ul>
-					{socialMedia &&
-						socialMedia.map(({ name, url }, i) => (
+					{siteData.socialMedia?.map(
+						(data: { name: string; url: string }, i: number) => (
 							<li key={i}>
-								<a href={url} aria-label={name}>
-									<Icon name={name} />
+								<a href={data.url} aria-label={data.name}>
+									<Icon name={data.name} />
 								</a>
 							</li>
-						))}
+						)
+					)}
 				</ul>
 			</StyledSocialLinks>
 
-			<StyledCredit tabindex="-1">
+			<StyledCredit tabIndex={-1}>
 				<a href="/#">
 					<div>Back to Top</div>
 				</a>

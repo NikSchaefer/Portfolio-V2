@@ -34,9 +34,9 @@
 		"src/hooks/_document.js",
 		"src/pages/_error.js",
 		"src/lib/gtag.js",
-		"src/pages/index.js",
+		"src/pages/index.tsx",
 		"src/components/sections/featured.",
 		"src/components/sections/featured.js",
-		"src/components/index.js"
-, "src/hooks/useScrollDirection.js"	]
+		"src/components/index.tsx"
+, "src/hooks/useScrollDirection.js", "src/components/side.js", "src/components/social.js", "src/components/menu.js"	]
 }

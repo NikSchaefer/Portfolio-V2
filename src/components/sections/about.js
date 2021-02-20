@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
-import { srConfig } from "../../config";
+import { siteData } from "../../config";
 import sr from "../../utils/sr";
 
 const StyledAboutSection = styled.section`
@@ -118,7 +118,7 @@ function About() {
 
 	useEffect(() =>
 	{
-		sr.reveal(revealContainer.current, srConfig());
+		sr.reveal(revealContainer.current, siteData.srConfig());
 	}, []);
 
 	const skills = [

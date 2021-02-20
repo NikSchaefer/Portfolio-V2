@@ -1,8 +1,7 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { email } from "../config";
+import { siteData } from "../config";
 
 import { Side } from ".";
 
@@ -36,19 +35,15 @@ const StyledLinkWrapper = styled.div`
 	}
 `;
 
-function Email({ isHome }) {
+function Email({ isHome }: {isHome:boolean}): JSX.Element {
 	return (
 		<Side isHome={isHome} orientation="right">
 			<StyledLinkWrapper>
-				<a href={`mailto:${email}`}>{email}</a>
+				<a href={`mailto:${String(siteData.email)}`}>{siteData.email}</a>
 			</StyledLinkWrapper>
 		</Side>
 	);
 }
-
-Email.propTypes = {
-	isHome: PropTypes.bool,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Email;

@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
 import jsonData from '../../../content/jobs.json'
-import { srConfig } from "../../config";
+import { siteData } from "../../config";
 import { KEY_CODES } from "../../utils";
 import sr from "../../utils/sr";
 
@@ -169,7 +169,7 @@ function Jobs() {
 	const tabs = useRef([]);
 
 	const revealContainer = useRef(null);
-	useEffect(() => sr.reveal(revealContainer.current, srConfig()), []);
+	useEffect(() => sr.reveal(revealContainer.current, siteData.srConfig()), []);
 
 	const focusTab = () => {
 		if (tabs.current[tabFocus]) {

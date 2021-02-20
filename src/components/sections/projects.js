@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
 import projectData from '../../../content/projects.json'
-import { srConfig } from "../../config";
+import { siteData } from "../../config";
 import { Icon } from "../icons";
 
 const StyledProjectsSection = styled.section`
@@ -142,10 +142,10 @@ function Projects() {
 	const revealProjects = useRef([]);
 
 	useEffect(() => {
-		sr.reveal(revealTitle.current, srConfig());
-		sr.reveal(revealArchiveLink.current, srConfig());
+		sr.reveal(revealTitle.current, siteData.srConfig());
+		sr.reveal(revealArchiveLink.current, siteData.srConfig());
 		revealProjects.current.forEach((ref, i) =>
-			sr.reveal(ref, srConfig(i * 100))
+			sr.reveal(ref, siteData.srConfig(i * 100))
 		);
 	}, []);
 

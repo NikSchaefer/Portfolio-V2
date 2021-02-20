@@ -5,25 +5,7 @@ const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
 
 export { GA_TRACKING_ID, IS_PRODUCTION, IS_TEST, IS_BROWSER };
-export const navLinks = [
-	{
-		name: "About",
-		url: "/#about",
-	},
-	{
-		name: "Experience",
-		url: "/#jobs",
-	},
-	{
-		name: "Work",
-		url: "/#projects",
-	},
-	{
-		name: "Contact",
-		url: "/#contact",
-	},
-];
-module.exports = {
+export const siteData = {
 	email: "nikkschaefer@gmail.com",
 	siteMetadata: {
 		title: "Nik Schaefer Portfolio",
@@ -45,6 +27,24 @@ module.exports = {
 			"Code",
 		],
 	},
+	navLinks: [
+		{
+			name: "About",
+			url: "/#about",
+		},
+		{
+			name: "Experience",
+			url: "/#jobs",
+		},
+		{
+			name: "Work",
+			url: "/#projects",
+		},
+		{
+			name: "Contact",
+			url: "/#contact",
+		},
+	],
 	socialMedia: [
 		{
 			name: "GitHub",

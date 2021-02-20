@@ -2,7 +2,7 @@ import { GA_TRACKING_ID } from "@src/config.js";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-import { siteMetadata } from "../config";
+import { siteData } from "../config";
 
 const {
 	defaultTitle,
@@ -10,7 +10,7 @@ const {
 	siteUrl,
 	defaultImage,
 	twitterUsername,
-} = siteMetadata;
+} = siteData.siteMetadata;
 
 const seo = {
 	title: defaultTitle,

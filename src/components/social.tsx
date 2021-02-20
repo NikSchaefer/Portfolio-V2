@@ -1,9 +1,8 @@
 /* eslint-disable react/no-array-index-key */
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import { socialMedia } from "../config";
+import { siteData } from "../config";
 import { Icon } from "./icons";
 
 import { Side } from ".";
@@ -46,26 +45,23 @@ const StyledSocialList = styled.ul`
 	}
 `;
 
-function Social({ isHome }) {
+function Social({ isHome }: { isHome: boolean }): JSX.Element {
 	return (
 		<Side isHome={isHome} orientation="left">
 			<StyledSocialList>
-				{socialMedia &&
-					socialMedia.map(({ url, name }, i) => (
+				{siteData.socialMedia?.map(
+					(data: { name: string; url: string }, i: number) => (
 						<li key={i}>
-							<a href={url} aria-label={name}>
-								<Icon name={name} />
+							<a href={data.url} aria-label={data.name}>
+								<Icon name={data.name} />
 							</a>
 						</li>
-					))}
+					)
+				)}
 			</StyledSocialList>
 		</Side>
 	);
 }
-
-Social.propTypes = {
-	isHome: PropTypes.bool,
-};
 
 // eslint-disable-next-line import/no-default-export
 export default Social;

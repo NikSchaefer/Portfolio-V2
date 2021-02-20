@@ -7,8 +7,7 @@ import styled, { css } from "styled-components";
 import { useScrollDirection } from "../hooks";
 import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";
-
-import { Menu } from ".";
+import Menu from "./menu";
 
 type Props = {
 	scrollDirection: string;
