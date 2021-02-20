@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-const Layout = styled.main`
+const Container = styled.main`
 	padding: 100px 0;
-	background-color: white;
 	text-align: left;
 `;
 
@@ -12,10 +11,9 @@ const Content = styled.section`
 	margin: auto;
 	font-size: 21px;
 	letter-spacing: -0.003em;
-	line-height: 1.5;
+	line-height: 1.6;
 	font-style: normal;
 	word-break: break-word;
-	color: #374151;
 	a {
 		color: var(--highlight);
 		text-decoration: underline;
@@ -29,6 +27,18 @@ const Content = styled.section`
 	h4,
 	h5 {
 		font-weight: 600;
+	}
+	pre, code {
+		background-color: var(--light-navy);
+		color: var(--white);
+		font-size: var(--fz-sm);
+		border-radius: var(--border-radius);
+		padding: 0.3em 0.5em;
+	}
+
+	h4 svg {
+		width: unset;
+		height: unset;
 	}
 	h1 {
 		font-size: 60px;
@@ -47,7 +57,7 @@ const AuthorSection = styled.div`
 	text-align: center;
 	margin-bottom: 100px;
 	padding-bottom: 20px;
-	border-bottom: 1px var(--highlight) solid;
+	border-bottom: 1px var(--green) solid;
 	h4 {
 		margin: 0;
 		display: flex;
@@ -60,12 +70,4 @@ const AuthorSection = styled.div`
 	}
 `;
 
-const Dates = styled.div`
-	display: flex;
-	justify-content: space-evenly;
-	font-size: 18px;
-	max-width: 400px;
-	margin: auto;
-`;
-
-export { Layout, Content, StyledTitle, AuthorSection, Dates };
+export { Container, Content, StyledTitle, AuthorSection };

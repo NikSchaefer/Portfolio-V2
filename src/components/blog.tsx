@@ -2,14 +2,11 @@
 import sr from "@utils/sr";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import styled from "styled-components";
+
 import { siteData } from "../config";
-const Span = styled.span`
-	color: var(--green);
-	font-family: var(--font-mono);
-`;
 
 type Blog = {
 	image: string;
@@ -20,39 +17,45 @@ type Blog = {
 
 const BlogData: Blog[] = [
 	{
-		title: "Why we use Django, and you should too",
-		url: "/blog",
+		title: "Why I use Django, and you should too",
+		url: "/blog/why-django-is-great",
+		image: "/blog/setting-up-django.jpg",
+		min: 5,
+	},
+	{
+		title: "How to Use a .Dockerfile",
+		url: "/blog/using-a-dockerfile",
+		image: "/blog/docker.png",
+		min: 5,
+	},
+	{
+		title: "A Beginner's First Machine Learning Model",
+		url: "/blog/beginner-machine-learning-model",
+		image: "/blog/ml.webp",
+		min: 5,
+	},
+	{
+		title: "Rest API Authentication in Django",
+		url: "/blog/rest-api-auth-django",
 		image: "/blog/django-rest-auth.jpg",
 		min: 5,
 	},
 	{
-		title: "Title Title Title Title",
-		url: "/fblog",
-		image: "/blog/django-rest-auth.jpg",
+		title: "Why I use NextJS over Gatsby for Personal Projects",
+		url: "/blog/why-I-choose-nextjs-over-gatsby",
+		image: "/blog/nextjs.jpg",
 		min: 5,
 	},
 	{
-		title: "Title Title Title Title",
-		url: "/ablog",
-		image: "/blog/django-rest-auth.jpg",
+		title: "The Basics of Webpack",
+		url: "/blog/webpack-basics",
+		image: "/blog/webpack.jpg",
 		min: 5,
 	},
 	{
-		title: "Why we use Django, and you should too",
-		url: "/blog",
-		image: "/blog/django-rest-auth.jpg",
-		min: 5,
-	},
-	{
-		title: "Title Title Title Title",
-		url: "/fblog",
-		image: "/blog/django-rest-auth.jpg",
-		min: 5,
-	},
-	{
-		title: "Title Title Title Title",
-		url: "/ablog",
-		image: "/blog/django-rest-auth.jpg",
+		title: "Why you should migrate to Typescript",
+		url: "/blog/why-you-should-use-typescript",
+		image: "/blog/typescript.svg",
 		min: 5,
 	},
 ];
@@ -62,6 +65,11 @@ const Container = styled.section`
 	max-width: 1400px;
 	margin: auto;
 	padding-bottom: 100px;
+	.more-button {
+		${({ theme }) => theme.mixins.button};
+		margin: 40px auto 0;
+		display:block;
+	}
 `;
 
 const Meta = styled.div`
@@ -84,13 +92,14 @@ const Content = styled.div`
 `;
 const StyledCard = styled.div`
 	background-color: var(--light-navy);
-	box-shadow: 0 0 10px var(--lightest-navy);
 	border-radius: 6px;
 	overflow: hidden;
 	margin: 20px;
 	width: 350px;
 	position: relative;
 	padding-bottom: 30px;
+	top:0;
+	transition: top ease 0.25s;
 	div {
 		box-sizing: border-box;
 		padding: 3% 5%;
@@ -112,6 +121,7 @@ const StyledCard = styled.div`
 		}
 	}
 	:hover {
+		top: -5px;
 		cursor: pointer;
 		.link {
 			color: var(--green);
@@ -125,6 +135,12 @@ const StyledCard = styled.div`
 export default function BlogHome(): JSX.Element {
 	const revealTitle = useRef(null);
 	const revealBlogs = useRef<HTMLDivElement[]>([]);
+	const [showMore, setShowMore] = useState(false);
+
+	const firstSix = BlogData.slice(0, 6);
+
+	const blogsToShow = showMore ? BlogData : firstSix;
+
 	useEffect(() => {
 		sr.reveal(revealTitle.current, siteData.srConfig());
 		revealBlogs.current.forEach((ref, i) =>
@@ -140,7 +156,7 @@ export default function BlogHome(): JSX.Element {
 				</h2>
 			</Meta>
 			<Content>
-				{BlogData.map((data, i) => (
+				{blogsToShow.map((data, i) => (
 					<StyledCard
 						ref={(el: HTMLDivElement) => {
 							revealBlogs.current[i] = el;
@@ -169,6 +185,15 @@ export default function BlogHome(): JSX.Element {
 					</StyledCard>
 				))}
 			</Content>
+			<button
+				type="button"
+				className="more-button"
+				onClick={() => {
+					setShowMore(!showMore);
+				}}
+			>
+				Show {showMore ? "Less" : "More"}
+			</button>
 		</Container>
 	);
 }

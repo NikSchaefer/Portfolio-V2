@@ -1,11 +1,11 @@
 /* eslint-disable import/no-default-export */
 
+import Layout from "@components/layout";
 import {
-	Layout,
+	Container,
 	Content,
 	StyledTitle,
 	AuthorSection,
-	Dates,
 } from "@styles/blog.theme";
 import { postFilePaths, POSTS_PATH } from "@utils/mdxUtils";
 import fs from "fs";
@@ -37,29 +37,26 @@ export default function Slug({
 	const content = hydrate(source);
 	return (
 		<Layout>
-			<Head>
-				<title>{frontMatter.title} | Blog</title>
-			</Head>
-			<Content>
-				<StyledTitle>{frontMatter.title}</StyledTitle>
-				<AuthorSection>
-					<h2>{frontMatter.description}</h2>
-					<Dates>
-						<h3>{frontMatter.datePub}</h3>
-						<h3>Last Edited: {frontMatter.dateEdit}</h3>
-					</Dates>
-					<h4>
-						<BiTimeFive
-							style={{ marginRight: "10px" }}
-							size="30px"
-						/>
-						{Math.ceil(wordCount / 275)} Min Read
-					</h4>
-				</AuthorSection>
-				<article>
-					{content}
-				</article>
-			</Content>
+			<Container>
+				<Head>
+					<title>{frontMatter.title} | Blog</title>
+				</Head>
+				<Content>
+					<StyledTitle>{frontMatter.title}</StyledTitle>
+					<AuthorSection>
+						<h2>{frontMatter.description}</h2>
+						<h4>
+							{frontMatter.datePub}
+							<BiTimeFive
+								style={{ margin: "0 10px" }}
+								size={20}
+							/>
+							{Math.ceil(wordCount / 275)} Min Read
+						</h4>
+					</AuthorSection>
+					<article>{content}</article>
+				</Content>
+			</Container>
 		</Layout>
 	);
 }

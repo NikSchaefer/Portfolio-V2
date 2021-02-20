@@ -184,17 +184,11 @@ function Nav({ isHome }: { isHome: boolean }): JSX.Element {
 					{isMounted && (
 						<CSSTransition classNames={fadeClass} timeout={timeout}>
 							<div className="logo" tabIndex={-1}>
-								{isHome ? (
 									<Link href="/">
 										<a aria-label="home">
 											<IconLogo />
 										</a>
 									</Link>
-								) : (
-									<Link href="/" aria-label="home">
-										<IconLogo />
-									</Link>
-								)}
 							</div>
 						</CSSTransition>
 					)}
