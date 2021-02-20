@@ -164,7 +164,7 @@ export default function BlogHome(): JSX.Element {
 						key={data.url}
 					>
 						<Link href={data.url}>
-							<a>
+							<a aria-label={data.title}>
 								<Image
 									src={data.image}
 									width={400}
