@@ -21,6 +21,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 		<>
 			<Head>
 				<title>{siteData.siteMetadata.title}</title>
+				<meta name="description" content={siteData.siteMetadata.description} />
 			</Head>
 			<Component {...pageProps} />
 		</>

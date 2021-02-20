@@ -19,14 +19,6 @@ export const siteData = {
 		name: "Nik Schaefer",
 		url: "https://nikschaefer.tech",
 		language: `en-us`,
-		keywords: [
-			"Nik",
-			"Schaefer",
-			"Programming",
-			"Engineer",
-			"Software",
-			"Code",
-		],
 	},
 	navLinks: [
 		{

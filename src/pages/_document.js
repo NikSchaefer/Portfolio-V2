@@ -50,29 +50,10 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en-us" title={seo.title}>
 				<Head title={seo.title}>
-					<script
-						async
-						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-					/>
-					<script
-						// eslint-disable-next-line react/no-danger
-						dangerouslySetInnerHTML={{
-							__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-						}}
-					/>
 					<meta
 						name="google-site-verification"
 						content="tKabbDcLNnzaVk1PR4QNF6C0bzBSr1fV3GoTGeiWnlQ"
 					/>
-					<meta name="description" content={seo.description} />
-
 					<meta itemProp="name" content={seo.title} />
 					<meta itemProp="description" content={seo.description} />
 					<meta itemProp="image" content={seo.image} />
@@ -90,6 +71,24 @@ export default class MyDocument extends Document {
 						content={seo.description}
 					/>
 					<meta name="twitter:image" content={seo.image} />
+
+					<script
+						async
+						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+					/>
+					<script
+						// eslint-disable-next-line react/no-danger
+						dangerouslySetInnerHTML={{
+							__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+						}}
+					/>
 				</Head>
 				<body>
 					<Main />
