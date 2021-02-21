@@ -17,7 +17,7 @@
 		"clean": "npx prettier --write ."
 	},
 	"dependencies": {
-		"@babel/core": "^7.12.17",
+		"@babel/core": "^7.12.10",
 		"animejs": "^3.2.1",
 		"gray-matter": "^4.0.2",
 		"next": "10.0.5",
