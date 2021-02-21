@@ -1,13 +1,13 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable react/no-array-index-key */
+import { Icon } from "@components/icons";
+import sr from "@utils/sr";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import jsonData from "../../../content/featured.json";
 import { siteData } from "../../config";
-import sr from "../../utils/sr";
-import { Icon } from "../icons";
 
 const StyledProject = styled.div`
 	display: grid;

@@ -1,10 +1,10 @@
 /* eslint-disable react/no-array-index-key */
+import sr from "@utils/sr";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import { siteData } from "../../config";
-import sr from "../../utils/sr";
 
 const StyledAboutSection = styled.section`
 	max-width: 900px;

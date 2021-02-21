@@ -1,13 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react-hooks/exhaustive-deps */
+import { KEY_CODES } from "@utils/index";
+import sr from "@utils/sr";
 import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
 import jsonData from "../../../content/jobs.json";
 import { siteData } from "../../config";
-import { KEY_CODES } from "../../utils";
-import sr from "../../utils/sr";
 
 type Props = {
 	isActive?: boolean;

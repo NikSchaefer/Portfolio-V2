@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styled from "styled-components";
 
-import { loaderDelay } from "../utils";
+import { loaderDelay } from "@utils/index";
 
 type Props = {
 	orientation: string;

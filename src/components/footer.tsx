@@ -1,11 +1,11 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { Icon } from "@components/icons";
+import mixins from "@styles/mixins";
 import React from "react";
 import styled from "styled-components";
 
 import { siteData } from "../config";
-import { mixins } from "../styles";
 
 const StyledFooter = styled.footer`
 	display: flex;

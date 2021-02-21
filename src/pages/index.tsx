@@ -1,6 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-
 import {
 	Layout,
 	Hero,
@@ -10,7 +7,10 @@ import {
 	Projects,
 	Contact,
 	Blog,
-} from "../components";
+} from "@components/index";
+import React from "react";
+import styled from "styled-components";
+
 
 const StyledMainContainer = styled.main`
 	counter-reset: section;

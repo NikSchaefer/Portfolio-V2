@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
+import { GlobalStyle, theme } from "@styles/index";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import { GlobalStyle, theme } from "../styles";
 import Nav from "./nav";
 
 import { Loader, Social, Email, Footer } from ".";

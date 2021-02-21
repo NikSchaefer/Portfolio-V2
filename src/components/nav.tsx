@@ -1,4 +1,5 @@
 /* eslint-disable react/no-array-index-key */
+import { loaderDelay } from "@utils/index";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -6,7 +7,6 @@ import styled, { css } from "styled-components";
 
 import { siteData } from "../config";
 import { useScrollDirection } from "../hooks";
-import { loaderDelay } from "../utils";
 import { IconLogo } from "./icons";
 import Menu from "./menu";
 

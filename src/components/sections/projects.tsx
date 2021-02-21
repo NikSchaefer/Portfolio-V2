@@ -1,5 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/no-danger */
+import { Icon } from "@components/icons";
 import sr from "@utils/sr";
 import React, { useState, useEffect, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -7,7 +8,6 @@ import styled from "styled-components";
 
 import projectData from "../../../content/projects.json";
 import { siteData } from "../../config";
-import { Icon } from "../icons";
 
 const StyledProjectsSection = styled.section`
 	display: flex;
