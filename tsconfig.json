@@ -28,9 +28,5 @@
 		}
 	},
 	"exclude": ["node_modules"],
-	"include": [
-		"**/*.ts",
-		"**/*.tsx",
-		"src/pages/_document.js",
-	]
+	"include": ["**/*.ts", "**/*.tsx", "src/pages/_document.js"]
 }
