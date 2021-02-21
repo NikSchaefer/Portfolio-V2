@@ -70,9 +70,13 @@ export default function Footer(): JSX.Element {
 			</StyledSocialLinks>
 
 			<StyledCredit tabIndex={-1}>
-				<a href="/#">
-					<div>Developed in NextJS by Nik Schaefer</div>
-				</a>
+				<p>
+					Developed in NextJS by Nik Schaefer
+					<br />
+					<br />
+					Design Based off{" "}
+					<a href="https://brittanychiang.com/">Brittany Chiang</a>
+				</p>
 			</StyledCredit>
 		</StyledFooter>
 	);

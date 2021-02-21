@@ -229,7 +229,7 @@ function Jobs(): JSX.Element {
 					aria-label="Job tabs"
 					onKeyDown={onKeyDown}
 				>
-					<ul>
+					<ul style={{listStyle:'none'}}>
 						{jobsData &&
 							jobsData.map((data, i) => {
 								const { company } = data;
