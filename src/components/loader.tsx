@@ -42,8 +42,10 @@ const StyledLoader = styled.div`
 function Loader({ finishLoading }: { finishLoading: Function }): JSX.Element {
 	const animate = () => {
 		const loader = anime.timeline({
-			complete: () => { finishLoading(); window.scrollTo(0, 0)},
-			
+			complete: () => {
+				finishLoading();
+				window.scrollTo(0, 0);
+			},
 		});
 
 		loader

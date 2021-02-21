@@ -229,32 +229,28 @@ function Jobs(): JSX.Element {
 					aria-label="Job tabs"
 					onKeyDown={onKeyDown}
 				>
-					<ul style={{listStyle:'none'}}>
-						{jobsData &&
-							jobsData.map((data, i) => {
-								const { company } = data;
-								return (
-									<li key={i}>
-										<StyledTabButton
-											isActive={activeTabId === i}
-											onClick={() => {
-												setActiveTabId(i);
-											}}
-											ref={(el) => (tabs.current[i] = el)}
-											id={`tab-${i}`}
-											role="tab"
-											aria-selected={activeTabId === i}
-											aria-controls={`panel-${i}`}
-											tabIndex={
-												activeTabId === i ? 0 : -1
-											}
-										>
-											<span>{company}</span>
-										</StyledTabButton>
-									</li>
-								);
-							})}
-					</ul>
+					{jobsData &&
+						jobsData.map((data, i) => {
+							const { company } = data;
+							return (
+								<li key={i}>
+									<StyledTabButton
+										isActive={activeTabId === i}
+										onClick={() => {
+											setActiveTabId(i);
+										}}
+										ref={(el) => (tabs.current[i] = el)}
+										id={`tab-${i}`}
+										role="tab"
+										aria-selected={activeTabId === i}
+										aria-controls={`panel-${i}`}
+										tabIndex={activeTabId === i ? 0 : -1}
+									>
+										<span>{company}</span>
+									</StyledTabButton>
+								</li>
+							);
+						})}
 					<StyledHighlight activeTabId={activeTabId} />
 				</StyledTabList>
 
