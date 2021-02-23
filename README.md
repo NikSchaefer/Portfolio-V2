@@ -15,7 +15,7 @@ To build this project I used
  -  React
  -  Typescript
  
- Deployed on Vercel at <a href="https://nikschaefer.tech/">https://nikschaefer.tech</a>
+ Deployed on Vercel at <a href="https://nikschaefer.tech/">nikschaefer.tech</a>
   
 ## Credit
  Design was heavily inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>
