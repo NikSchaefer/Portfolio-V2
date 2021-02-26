@@ -20,6 +20,7 @@ function IndexPage(): JSX.Element {
 			<StyledMainContainer className="fillHeight">
 				<Hero />
 				<About />
+				{/* <Skills /> */}
 				<Jobs />
 				<Featured />
 				<Projects />
