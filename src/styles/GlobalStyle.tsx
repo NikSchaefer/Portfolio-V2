@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-import TransitionStyles from "./TransitionStyles";
 import mixins from "./mixins";
 
 const GlobalStyle = createGlobalStyle`
@@ -245,8 +244,7 @@ code {
   }
 
   img,
-  svg,
-  .gatsby-image-wrapper {
+  svg {
     width: 100%;
     max-width: 100%;
     vertical-align: middle;
@@ -349,30 +347,6 @@ code {
     }
   }
 
-  blockquote {
-    border-left-color: var(--green);
-    border-left-style: solid;
-    border-left-width: 1px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 1.5rem;
-
-    p {
-      font-style: italic;
-      font-size: 24px;
-    }
-  }
-
-  hr {
-    background-color: var(--lightest-navy);
-    height: 1px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    margin: 1rem;
-  }
-
   code {
     font-family: var(--font-mono);
     font-size: var(--fz-md);
@@ -432,8 +406,44 @@ code {
     }
   }
   
-  ${TransitionStyles};
+  	.fadeup-enter {
+		opacity: 0.01;
+		transform: translateY(20px);
+		transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+	}
 
+	.fadeup-enter-active {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+	}
+
+	.fadedown-enter {
+		opacity: 0.01;
+		transform: translateY(-20px);
+		transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+	}
+
+	.fadedown-enter-active {
+		opacity: 1;
+		transform: translateY(0px);
+		transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+	}
+
+	.fade-enter {
+		opacity: 0;
+	}
+	.fade-enter-active {
+		opacity: 1;
+		transition: opacity 300ms var(--easing);
+	}
+	.fade-exit {
+		opacity: 1;
+	}
+	.fade-exit-active {
+		opacity: 0;
+		transition: opacity 300ms var(--easing);
+	}
 `;
 
 // eslint-disable-next-line import/no-default-export

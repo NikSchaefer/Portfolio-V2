@@ -10,7 +10,7 @@
 
 ## Stack
 To build this project I used
- - NextJS
+ -  NextJS
  -  Styled Components
  -  React
  -  Typescript
@@ -18,7 +18,7 @@ To build this project I used
  Deployed on Vercel at <a href="https://nikschaefer.tech/">nikschaefer.tech</a>
   
 ## Credit
- Design was heavily inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>
+ Design was inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>
  
  ## Development
  

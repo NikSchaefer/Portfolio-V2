@@ -40,6 +40,10 @@ export default function Slug({
 			<Container>
 				<Head>
 					<title>{frontMatter.title} | Blog</title>
+					<meta
+						name="description"
+						content={frontMatter.description}
+					/>
 				</Head>
 				<Content>
 					<StyledTitle>{frontMatter.title}</StyledTitle>

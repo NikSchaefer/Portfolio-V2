@@ -14,19 +14,13 @@ const Content = styled.section`
 	line-height: 1.6;
 	font-style: normal;
 	word-break: break-word;
-	a {
-		color: var(--highlight);
-		text-decoration: underline;
-	}
-	a:hover {
-		text-decoration: none;
-	}
 	h1,
 	h2,
 	h3,
 	h4,
 	h5 {
 		font-weight: 600;
+		margin: 10px 0;
 	}
 	pre,
 	code {
@@ -41,22 +35,17 @@ const Content = styled.section`
 		width: unset;
 		height: unset;
 	}
-	h1 {
-		font-size: 60px;
-	}
 	img {
 		width: 99%;
 		margin-bottom: 40px;
 	}
 `;
 const StyledTitle = styled.h1`
-	font-size: 70px;
-	text-align: center;
+	font-size: 55px;
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 `;
 
 const AuthorSection = styled.div`
-	text-align: center;
 	margin-bottom: 100px;
 	padding-bottom: 20px;
 	border-bottom: 1px var(--green) solid;

@@ -27,7 +27,7 @@
 		"external": "https://csresources.herokuapp.com/",
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
 		"showInProjects": true,
-		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A currated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
+		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
 	},
 	{
 		"date": "15",
