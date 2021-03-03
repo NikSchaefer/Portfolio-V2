@@ -17,46 +17,52 @@ type Blog = {
 
 const BlogData: Blog[] = [
 	{
+		title: "Why Developers love Golang",
+		url: "/blog/why-developers-love-golang",
+		image: "/blog/codeonlaptop.jpg",
+		min: 3,
+	},
+	{
 		title: "Why I use Django, and you should too",
 		url: "/blog/why-django-is-great",
 		image: "/blog/setting-up-django.jpg",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "How to Use a .Dockerfile",
 		url: "/blog/using-a-dockerfile",
 		image: "/blog/docker.png",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "A Beginner's First Machine Learning Model",
 		url: "/blog/beginner-machine-learning-model",
 		image: "/blog/ml.webp",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "Rest API Authentication in Django",
 		url: "/blog/rest-api-auth-django",
 		image: "/blog/django-rest-auth.jpg",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "Why I use NextJS over Gatsby for Personal Projects",
 		url: "/blog/why-I-choose-nextjs-over-gatsby",
 		image: "/blog/nextjs.jpg",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "The Basics of Webpack",
 		url: "/blog/webpack-basics",
 		image: "/blog/webpack.jpg",
-		min: 5,
+		min: 2,
 	},
 	{
 		title: "Why you should migrate to Typescript",
 		url: "/blog/why-you-should-use-typescript",
 		image: "/blog/typescript.svg",
-		min: 5,
+		min: 2,
 	},
 ];
 

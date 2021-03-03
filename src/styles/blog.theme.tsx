@@ -39,6 +39,9 @@ const Content = styled.section`
 		width: 99%;
 		margin-bottom: 40px;
 	}
+	a {
+		color: var(--green);
+	}
 `;
 const StyledTitle = styled.h1`
 	font-size: 55px;
