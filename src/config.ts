@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 // google analytics mearsurement id
-const GA_TRACKING_ID = "U-XXXXXX";
+const GA_TRACKING_ID = "G-2B47V4H829";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
