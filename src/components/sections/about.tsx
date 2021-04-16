@@ -133,6 +133,7 @@ function About(): JSX.Element {
 		"React Native",
 		"Python",
 		"Gatsby",
+		"Golang",
 	];
 
 	return (
@@ -151,9 +152,8 @@ function About(): JSX.Element {
 							I've been enjoying programming since I first began.
 							I love supporting open source and making my own
 							projects. I have taken on various roles between
-							design, research and development. In my free time I
-							like to be contributing to open source projects,
-							building my own projects, and further my education.{" "}
+							design, research and development. I am currently
+							learning Golang and its many uses in my free time.{" "}
 						</p>
 
 						<p>
