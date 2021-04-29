@@ -1,0 +1,76 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "11:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.30
+    - 14.14.31
+    - 14.14.34
+    - 15.0.0
+  - dependency-name: eslint-config-galex
+    versions:
+    - 2.11.6
+    - 2.13.0
+    - 2.13.2
+    - 2.13.4
+    - 2.15.1
+  - dependency-name: next
+    versions:
+    - 10.0.7
+    - 10.1.2
+  - dependency-name: react-icons
+    versions:
+    - 4.2.0
+  - dependency-name: "@types/react"
+    versions:
+    - 17.0.2
+  - dependency-name: "@babel/preset-typescript"
+    versions:
+    - 7.12.17
+  - dependency-name: typescript
+    versions:
+    - 4.1.5
+  - dependency-name: gatsby-plugin-google-gtag
+    versions:
+    - 2.8.0
+  - dependency-name: gatsby-image
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-plugin-sitemap
+    versions:
+    - 2.12.0
+  - dependency-name: gatsby-remark-prismjs
+    versions:
+    - 3.13.0
+  - dependency-name: gatsby-source-filesystem
+    versions:
+    - 2.11.0
+  - dependency-name: gatsby-plugin-offline
+    versions:
+    - 3.10.0
+    - 3.9.0
+  - dependency-name: gatsby-plugin-styled-components
+    versions:
+    - 3.10.0
+  - dependency-name: gatsby-remark-images
+    versions:
+    - 3.11.0
+  - dependency-name: gatsby-plugin-sharp
+    versions:
+    - 2.13.3
+    - 2.14.0
+  - dependency-name: gatsby-transformer-remark
+    versions:
+    - 2.16.0
+  - dependency-name: gatsby-plugin-manifest
+    versions:
+    - 2.12.0
+  - dependency-name: gatsby
+    versions:
+    - 2.30.1
