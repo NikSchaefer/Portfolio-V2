@@ -42,6 +42,6 @@
 		"babel-plugin-styled-components": "^1.12.0",
 		"eslint": "^7.25.0",
 		"eslint-config-galex": "^2.15.3",
-		"prettier": "^2.2.1"
+		"prettier": "^2.3.0"
 	}
 }
