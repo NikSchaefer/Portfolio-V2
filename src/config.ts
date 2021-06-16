@@ -7,17 +7,16 @@ const IS_BROWSER = typeof window !== "undefined";
 
 export { GA_TRACKING_ID, IS_PRODUCTION, IS_TEST, IS_BROWSER };
 export const siteData = {
-	email: "Hazimarafa80@gmail.com",
+	email: "hazimarafa80@gmail.com",
 	siteMetadata: {
 		title: "Hazim Arafa Portfolio",
 		description:
 			"I'm Hazim, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US. I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. In my free time I like to be contributing to open source projects, building my own projects, and further my education.",
-		siteUrl: "https://Hazimarafa80.tech", // No trailing slash allowed!
+		siteUrl: "https://hazimarafa80.tech", // No trailing slash allowed!
 		image: "/me.png",
-		twitterUsername: "@Hazimarafa80_",
-		author: "Hazimarafa80@gmail.com Hazim Arafa",
+		author: "hazimarafa80@gmail.com Hazim Arafa",
 		name: "Hazim Arafa",
-		url: "https://Hazimarafa80.tech",
+		url: "https://hazimarafa80.tech",
 		language: `en-us`,
 	},
 	navLinks: [
@@ -41,7 +40,7 @@ export const siteData = {
 	socialMedia: [
 		{
 			name: "GitHub",
-			url: "https://github.com/Hazimarafa80",
+			url: "https://github.com/hazimarafa80",
 		},
 		{
 			name: "LinkedIn",
