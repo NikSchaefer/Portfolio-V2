@@ -6,7 +6,6 @@ import {
 	Featured,
 	Projects,
 	Contact,
-	Blog,
 } from "@components/index";
 import React from "react";
 import styled from "styled-components";
@@ -24,7 +23,6 @@ function IndexPage(): JSX.Element {
 				<Jobs />
 				<Featured />
 				<Projects />
-				<Blog />
 				<Contact />
 			</StyledMainContainer>
 		</Layout>
