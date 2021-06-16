@@ -14,11 +14,9 @@ To build this project I used
  -  Styled Components
  -  React
  -  Typescript
+ -  Chakra UI
  
  Deployed on Vercel at <a href="https://nikschaefer.tech/">nikschaefer.tech</a>
-  
-## Credit
- Design was inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>
  
  ## Development
  
