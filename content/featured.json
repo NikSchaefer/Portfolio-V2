@@ -17,7 +17,7 @@
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"showInProjects": true,
-		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. "
+		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utilizes a random dog Api for Images and videos while text is randomly generated. "
 	},
 	{
 		"date": "1",
@@ -27,7 +27,7 @@
 		"external": "https://sparksvolleyballclub.com/",
 		"tech": ["React", "Typescript", "NextJS", "Chakra UI"],
 		"showInProjects": true,
-		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
+		"content": "Contains direct comparisons of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Recommended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
 	},
 	{
 		"date": "15",
@@ -37,6 +37,6 @@
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
-		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API"
+		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throughout Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API"
 	}
 ]
