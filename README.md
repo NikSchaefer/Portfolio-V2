@@ -17,7 +17,7 @@ To build this project I used
 -   Typescript
 -   Chakra UI
 
-Deployed on Vercel at <a href="https://Hazimarafa.tech/">Hazimarafa.tech</a>
+Deployed on Vercel at <a href="https://webdefy.tech/">webdefy.tech</a>
 
 ## Development
 
