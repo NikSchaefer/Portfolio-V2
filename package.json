@@ -1,11 +1,11 @@
 {
 	"name": "my-app",
 	"version": "0.1.0",
-	"author": "Nik Schaefer <nikkschaefer@gmail.com>",
+	"author": "Hazim Arafa <Hazimarafa80@gmail.com>",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/NikSchaefer/"
+		"url": "https://github.com/Hazimar/"
 	},
 	"keywords": [
 		"NextJS"

@@ -122,18 +122,21 @@ function About(): JSX.Element {
 
 	const skills = [
 		"JavaScript (ES6+)",
-		"HTML & CSS",
 		"Typescript",
+		"HTML & CSS",
 		"NextJS",
 		"ReactJS",
 		"Node.js",
 		"Django",
-		"C#",
-		"Firebase",
+		"Fiber (Golang)",
+		"Java",
+		"PostgreSQL",
 		"React Native",
 		"Python",
 		"Gatsby",
 		"Golang",
+		"SQL",
+		"Docker",
 	];
 
 	return (
@@ -144,8 +147,8 @@ function About(): JSX.Element {
 				<StyledText>
 					<div>
 						<p>
-							I'm Nik, self-taught full-stack developer and
-							hobbyist programmer student based in Minnesota, US
+							I'm Hazim, self-taught full-stack developer and
+							hobbyist programmer student based in Las Vegas, US
 						</p>
 
 						<p>
@@ -153,7 +156,7 @@ function About(): JSX.Element {
 							I love supporting open source and making my own
 							projects. I have taken on various roles between
 							design, research and development. I am currently
-							learning Golang and its many uses in my free time.{" "}
+							learning Golang and its many uses in my free time.
 						</p>
 
 						<p>

@@ -1,15 +1,39 @@
 [
 	{
-		"date": "4",
-		"title": "Web Developer",
-		"company": "NVC",
+		"date": "5",
+		"title": "Fullstack Engineer",
+		"company": "Periodize",
 		"location": "Remote",
-		"range": "December  - Current",
-		"url": "/#",
+		"range": "May 2021 - Current",
+		"url": "https://periodize.org/",
 		"content": ["My Current Freelance Position"]
 	},
 	{
+		"date": "4",
+		"title": "Co-founder",
+		"company": "WebDefyer",
+		"location": "Remote",
+		"range": "December 2020 - Present",
+		"url": "https://webdefyer.com/",
+		"content": [
+			"Development based on company freelancing.",
+			"Lead Developer, working to build websites for numerous clients",
+			"Working in NextJS, Django and more"
+		]
+	},
+	{
 		"date": "3",
+		"title": "Web Developer",
+		"company": "NVC",
+		"location": "Remote",
+		"range": "December 2020 - February 2021",
+		"url": "/#",
+		"content": [
+			"Worked Directly with a partner and client to develop a reactive website"
+		]
+	},
+	{
+		"date": "2",
 		"title": "Web Developer",
 		"company": "Sparks VB Club",
 		"location": "Remote",
@@ -22,25 +46,12 @@
 	{
 		"date": "1",
 		"title": "Web Developer Intern",
-		"company": "The Esport Company",
+		"company": "The E-sports Company",
 		"location": "Remote",
 		"range": "September - December 2020",
 		"url": "https://www.theesportcompany.com/",
 		"content": [
 			"Worked directly with CEO and mentor to build a Wordpress Website"
-		]
-	},
-	{
-		"date": "5",
-		"title": "Co-founder",
-		"company": "Webdefy",
-		"location": "Remote",
-		"range": "December 2020 - Present",
-		"url": "https://webdefy.tech/",
-		"content": [
-			"Development based on company freelancing.",
-			"Lead Developer, working to build websites for numerous clients",
-			"Working in NextJS, Django and more"
 		]
 	}
 ]

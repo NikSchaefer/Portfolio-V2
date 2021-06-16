@@ -7,27 +7,24 @@
   <br />
 </p>
 
-
 ## Stack
+
 To build this project I used
- -  NextJS
- -  Styled Components
- -  React
- -  Typescript
- -  Chakra UI
- 
- Deployed on Vercel at <a href="https://nikschaefer.tech/">nikschaefer.tech</a>
- 
- ## Development
- 
- get dependencies
- `npm i`
- 
- to start a server at localhost:3000
- `npm run dev`
- 
- to create a build
- `npm run build`
- 
- to serve build file
- `npm run start`
+
+-   NextJS
+-   Styled Components
+-   React
+-   Typescript
+-   Chakra UI
+
+Deployed on Vercel at <a href="https://Hazimarafa.tech/">Hazimarafa.tech</a>
+
+## Development
+
+get dependencies `npm i`
+
+to start a server at localhost:3000 `npm run dev`
+
+to create a build `npm run build`
+
+to serve build file `npm run start`

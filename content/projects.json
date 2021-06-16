@@ -4,7 +4,7 @@
 		"date": "2020-9",
 		"index": 8,
 		"title": "Box Shadow Creator",
-		"github": "https://github.com/NikSchaefer/box-shadow-maker",
+		"github": "https://github.com/hazimar/box-shadow-maker",
 		"external": "https://box-shadow.vercel.app/",
 		"tech": ["React", "HTML + CSS", "Javascript"]
 	},
@@ -13,8 +13,8 @@
 		"date": "2020-11-4",
 		"index": 5,
 		"title": "Find discord Friends",
-		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
+		"github": "https://github.com/hazimar/Find-Discord-Friends",
+		"external": "https://github.com/hazimar/Find-Discord-Friends",
 		"tech": ["Python", "Selenium"]
 	},
 	{
@@ -22,8 +22,8 @@
 		"date": "2021-2-4",
 		"index": 2,
 		"title": "NextJS Boilerplate",
-		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",
-		"external": "https://boilerplate.nikschaefer.tech/",
+		"github": "https://github.com/hazimar/nextjs-boilerplate",
+		"external": "https://boilerplate.hazimar.tech/",
 		"tech": [
 			"Typescript",
 			"NextJS",
@@ -40,8 +40,8 @@
 		"date": "2020-11-15",
 		"index": 3,
 		"title": "Django React Typescript Template",
-		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
+		"github": "https://github.com/hazimar/Find-Discord-Friends",
+		"external": "https://github.com/hazimar/Find-Discord-Friends",
 		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"]
 	},
 	{
@@ -49,7 +49,7 @@
 		"date": "2020-12-20",
 		"index": 5,
 		"title": "Get CSS fonts used",
-		"github": "https://github.com/NikSchaefer/Get-CSS-Fonts-Used/tree/master",
+		"github": "https://github.com/hazimar/Get-CSS-Fonts-Used/tree/master",
 		"external": "https://get-css-fonts.vercel.app/",
 		"tech": ["React", "Javascript", "Axios"]
 	},
@@ -58,7 +58,7 @@
 		"date": "2020-10",
 		"index": 1,
 		"title": "Portfolio V1",
-		"github": "https://github.com/NikSchaefer/portfolio",
+		"github": "https://github.com/hazimar/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"]
 	},
 	{
@@ -66,7 +66,7 @@
 		"date": "2020-8",
 		"index": 7,
 		"title": "Umbrella App",
-		"github": "https://github.com/NikSchaefer/umbrella_website",
+		"github": "https://github.com/hazimar/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
 		"tech": ["React Native", "ReactJS", "Javascript"]
 	},
@@ -75,7 +75,7 @@
 		"date": "2020-11-17",
 		"index": 4,
 		"title": "Web Tools",
-		"github": "https://github.com/NikSchaefer/Web-Tools",
+		"github": "https://github.com/hazimar/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
 		"tech": ["Typescript", "React", "CRA"]
 	}

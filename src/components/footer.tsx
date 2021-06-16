@@ -71,11 +71,10 @@ export default function Footer(): JSX.Element {
 
 			<StyledCredit tabIndex={-1}>
 				<p>
-					Developed in NextJS by Nik Schaefer
+					Developed in NextJS by{" "}
+					<a href="https://github.com/HazimAr">Hazim Arafa</a> and{" "}
+					<a href="https://github.com/NikSchaefer">Nik Schaefer</a>
 					<br />
-					<br />
-					Design Based off{" "}
-					<a href="https://brittanychiang.com/">Brittany Chiang</a>
 				</p>
 			</StyledCredit>
 		</StyledFooter>

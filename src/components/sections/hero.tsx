@@ -54,12 +54,12 @@ function Hero(): JSX.Element {
 	}, []);
 
 	const one = <h1>Hi, my name is</h1>;
-	const two = <h2 className="big-heading">Nik Schaefer.</h2>;
+	const two = <h2 className="big-heading">Hazim Arafa.</h2>;
 	const three = <h3 className="big-heading">I build things for the web.</h3>;
 	const four = (
 		<p style={{ marginTop: "15px" }}>
 			I'm a self-taught full-stack developer and hobbyist programmer
-			student specializing in React and Django.
+			student specializing in React and Golang.
 		</p>
 	);
 	const five = (
