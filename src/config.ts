@@ -40,7 +40,7 @@ export const siteData = {
 	socialMedia: [
 		{
 			name: "GitHub",
-			url: "https://github.com/hazimarafa80",
+			url: "https://github.com/HazimAr",
 		},
 		{
 			name: "LinkedIn",
