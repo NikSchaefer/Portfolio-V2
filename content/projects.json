@@ -1,33 +1,15 @@
 [
 	{
-		"text": "Project based around creating an easily cusomizable box-shadow and to copy paste the css",
-		"date": "2020-9",
-		"index": 8,
-		"title": "Box Shadow Creator",
-		"github": "https://github.com/hazimar/box-shadow-maker",
-		"external": "https://box-shadow.vercel.app/",
-		"tech": ["React", "HTML + CSS", "Javascript"]
-	},
-	{
-		"text": "Python Script run on Selenium with Chromium to add all discord friends of a Name",
-		"date": "2020-11-4",
-		"index": 5,
-		"title": "Find discord Friends",
-		"github": "https://github.com/hazimar/Find-Discord-Friends",
-		"external": "https://github.com/hazimar/Find-Discord-Friends",
-		"tech": ["Python", "Selenium"]
-	},
-	{
 		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Google Analytics for Vercel with 100% on Lighthouse",
 		"date": "2021-2-4",
-		"index": 2,
-		"title": "NextJS Boilerplate",
-		"github": "https://github.com/hazimar/nextjs-boilerplate",
-		"external": "https://boilerplate.hazimar.tech/",
+		"index": 1,
+		"title": "NextJS and ChakraUI Boilerplate",
+		"github": "https://github.com/HazimAr/Nextjs-ChakraUI-Boilerplatee",
+		"external": "https://boilerplate.webdefy.tech/",
 		"tech": [
 			"Typescript",
 			"NextJS",
-			"Styled Components",
+			"ChakraUI",
 			"Lightweight",
 			"Google Analytics",
 			"ESLint",
@@ -36,47 +18,37 @@
 		]
 	},
 	{
-		"text": "Django Backend React Typescript frontend template configured to Easily Deploy onHeroku. Django Static is configured with whitenoise and is set up with djangorest framework",
-		"date": "2020-11-15",
-		"index": 3,
-		"title": "Django React Typescript Template",
-		"github": "https://github.com/hazimar/Find-Discord-Friends",
-		"external": "https://github.com/hazimar/Find-Discord-Friends",
-		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"]
+		"text": "This is the backend server for the loved tic-tac-toe multiplayer game using web sockets for real time play",
+		"date": "2021-6",
+		"index": 2,
+		"title": "Tic Tac Toe Multiplayer Server",
+		"github": "https://github.com/HazimAr/Tic-Tac-Toe-Multiplayer-Backend",
+		"external": "https://tic-calpico.herokuapp.com/",
+		"tech": ["Javascript", "NodeJS", "SocketIO", "Heroku"]
 	},
 	{
-		"text": "Small Project to parse Fonts used from website CSS files by URL",
-		"date": "2020-12-20",
-		"index": 5,
-		"title": "Get CSS fonts used",
-		"github": "https://github.com/hazimar/Get-CSS-Fonts-Used/tree/master",
-		"external": "https://get-css-fonts.vercel.app/",
-		"tech": ["React", "Javascript", "Axios"]
+		"text": "Half evil tattoos is a tattoo business based in Kentucky, providing their customers with the most enriching tattoo experience",
+		"date": "2021-6-16",
+		"index": 3,
+		"title": "Find discord Friends",
+		"github": "https://github.com/HazimAr/333Tattoos",
+		"external": "https://www.333tattoos.art/",
+		"tech": ["React", "NextJS", "Typescript", "Chakra UI", "NodeJS"]
+	},
+	{
+		"text": "Fiber framework using the modern programming language golang made by google, fiber has one of the fastest response times",
+		"date": "2021-4",
+		"index": 4,
+		"title": "Golang with Fiber",
+		"github": "https://github.com/NikSchaefer/go-fiber",
+		"tech": ["Fiber", "Golang", "PostgresSQL"]
 	},
 	{
 		"text": "The First Iteration of my Personal Portfolio",
-		"date": "2020-10",
-		"index": 1,
+		"date": "2020-9",
+		"index": 5,
 		"title": "Portfolio V1",
 		"github": "https://github.com/hazimar/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"]
-	},
-	{
-		"text": "The umbrella project is an App that Accesses the Open Weather API. It Takes yourcurrent location or location entered and will run in the background of yourdevice. It will send a notification if you need to take an umbrella",
-		"date": "2020-8",
-		"index": 7,
-		"title": "Umbrella App",
-		"github": "https://github.com/hazimar/umbrella_website",
-		"external": "https://theumbrella.vercel.app/",
-		"tech": ["React Native", "ReactJS", "Javascript"]
-	},
-	{
-		"text": "A site containing direct comparisions between Databases, Frameworks, Tools andmore",
-		"date": "2020-11-17",
-		"index": 4,
-		"title": "Web Tools",
-		"github": "https://github.com/hazimar/Web-Tools",
-		"external": "https://development-tools.vercel.app/",
-		"tech": ["Typescript", "React", "CRA"]
 	}
 ]

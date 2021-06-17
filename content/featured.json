@@ -19,19 +19,8 @@
 		"showInProjects": true,
 		"content": "School Simplified is a non-profit organization dedicated to the development and improvement of students ranging from ages 13+"
 	},
-	{
+		{
 		"date": "3",
-		"title": "Tic Tac Toe Multiplayer",
-		"cover": "tic.png",
-		"github": "https://github.com/HazimAr/Tic-Tac-Toe-Multiplayer",
-		"external": "https://tic-tac-toe-online.vercel.app",
-		"tech": ["React", "Typescript", "NextJS", "Chakra UI", "Web Sockets"],
-		"showInProjects": true,
-		"content": "Play tic tac toe multiplayer online with your friends in realtime using socket io on the server and the frontend, and change colors by going into your settings"
-	},
-
-	{
-		"date": "4",
 		"title": "Instadog",
 		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/dogegram",
@@ -39,5 +28,17 @@
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
 		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utilizes a random dog Api for Images and videos while text is randomly generated. "
+	},
+	{
+		"date": "4",
+		"title": "Tic Tac Toe Multiplayer",
+		"cover": "tic.png",
+		"github": "https://github.com/HazimAr/Tic-Tac-Toe-Multiplayer",
+		"external": "https://tic-tac-toe-online.vercel.app",
+		"tech": ["React", "Typescript", "NextJS", "Chakra UI", "Web Sockets"],
+		"showInProjects": true,
+		"content": "Play tic tac toe multiplayer online with your friends in realtime using socket io on the server and the frontend, and change colors by going into your settings"
 	}
+
+
 ]
