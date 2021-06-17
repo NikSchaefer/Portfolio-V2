@@ -249,7 +249,6 @@ const StyledProject = styled.div`
 	}
 `;
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function Featured(): JSX.Element {
 	const featuredProjects = jsonData.sort((a, b) => {
 		return Number(a.date) - Number(b.date);

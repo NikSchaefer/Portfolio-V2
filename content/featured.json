@@ -1,25 +1,5 @@
 [
 	{
-		"date": "17",
-		"title": "Developer Discords",
-		"cover": "discord.png",
-		"github": "https://github.com/hazimar/dev-discords",
-		"external": "https://dev-discords.now.sh/",
-		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"showInProjects": true,
-		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search"
-	},
-	{
-		"date": "20",
-		"title": "InstaDog",
-		"cover": "instadog.png",
-		"github": "https://github.com/NikSchaefer/InstaDog",
-		"external": "https://instadog.vercel.app/",
-		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"showInProjects": true,
-		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utilizes a random dog Api for Images and videos while text is randomly generated. "
-	},
-	{
 		"date": "1",
 		"title": "Sparks Volleyball",
 		"cover": "sparks.png",
@@ -27,16 +7,37 @@
 		"external": "https://sparksvolleyballclub.com/",
 		"tech": ["React", "Typescript", "NextJS", "Chakra UI"],
 		"showInProjects": true,
-		"content": "Contains direct comparisons of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Recommended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
+		"content": "Sparks volleyball is a club based in las vegas that provide a fun and competitive volleyball experience for kids of all gender and ages"
 	},
 	{
-		"date": "15",
-		"title": "Octo Stats",
-		"cover": "Octo.png",
-		"github": "https://github.com/hazimar/Octo-Stats",
-		"external": "https://octo-stats.vercel.app/",
+		"date": "2",
+		"title": "School Simplified",
+		"cover": "school.png",
+		"github": "https://github.com/HazimAr/School-Simplified",
+		"external": "https://schoolsimplified.org/",
+		"tech": ["React", "Typescript", "NextJS", "Chakra UI"],
+		"showInProjects": true,
+		"content": "School Simplified is a non-profit organization dedicated to the development and improvement of students ranging from ages 13+"
+	},
+	{
+		"date": "3",
+		"title": "Tic Tac Toe Multiplayer",
+		"cover": "tic.png",
+		"github": "https://github.com/HazimAr/Tic-Tac-Toe-Multiplayer",
+		"external": "https://tic-tac-toe-online.vercel.app",
+		"tech": ["React", "Typescript", "NextJS", "Chakra UI", "Web Sockets"],
+		"showInProjects": true,
+		"content": "Play tic tac toe multiplayer online with your friends in realtime using socket io on the server and the frontend, and change colors by going into your settings"
+	},
+
+	{
+		"date": "4",
+		"title": "Instadog",
+		"cover": "instadog.png",
+		"github": "https://github.com/NikSchaefer/dogegram",
+		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
-		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throughout Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API"
+		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utilizes a random dog Api for Images and videos while text is randomly generated. "
 	}
 ]
