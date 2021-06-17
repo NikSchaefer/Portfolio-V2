@@ -19,6 +19,9 @@ function IconLogo() {
 						strokeLinejoin="round"
 						points="39 0 0 22 0 67 39 90 78 68 78 23"
 					/>
+					<text fill="currentColor" fontSize="60px" x="22.5" y="65">
+						H
+					</text>
 				</g>
 			</g>
 		</svg>
