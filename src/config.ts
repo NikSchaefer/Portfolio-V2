@@ -13,7 +13,7 @@ export const siteData = {
 		description:
 			"I'm Hazim, self-taught full-stack developer and hobbyist programmer student based in Las Vegas, US. I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. In my free time I like to be contributing to open source projects, building my own projects, and further my education.",
 		siteUrl: "https://webdefy.tech", // No trailing slash allowed!
-		image: "/me.png",
+		image: "/logo.png",
 		author: "hazimarafa80@gmail.com Hazim Arafa",
 		name: "Hazim Arafa",
 		url: "https://webdefy.tech",
