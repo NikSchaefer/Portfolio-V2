@@ -58,7 +58,7 @@ function Hero(): JSX.Element {
 	const three = <h3 className="big-heading">I build things for the web.</h3>;
 	const four = (
 		<p style={{ marginTop: "15px" }}>
-			I'm a self-taught full-stack developer and hobbyist programmer
+			I'm a self-taught full-stack engineer and hobbyist programmer
 			specializing in React and Golang.
 		</p>
 	);
