@@ -229,21 +229,21 @@ const StyledProject = styled.div`
 				bottom: 0;
 				z-index: 3;
 				transition: var(--transition);
-				background-color: var(--navy);
+				/* background-color: var(--navy); */
 				mix-blend-mode: screen;
 			}
 		}
 
 		.img {
 			border-radius: var(--border-radius);
-			mix-blend-mode: multiply;
-			filter: grayscale(100%) contrast(1) brightness(90%);
+			/* mix-blend-mode: multiply; */
+			/* filter: grayscale(100%) contrast(1) brightness(90%); */
 
 			@media (max-width: 768px) {
 				object-fit: cover;
 				width: auto;
 				height: 100%;
-				filter: grayscale(100%) contrast(1) brightness(80%);
+				/* filter: grayscale(100%) contrast(1) brightness(80%); */
 			}
 		}
 	}
