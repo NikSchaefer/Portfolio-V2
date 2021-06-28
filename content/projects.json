@@ -18,9 +18,17 @@
 		]
 	},
 	{
+		"text": "Machine Learning Model that will predict one day into the future of a crypto currency",
+		"date": "2021-6-28",
+		"index": 2,
+		"title": "Crypto Currency Predictor",
+		"github": "https://github.com/HazimAr/Crypto-Currency-Predictord",
+		"tech": ["Python", "Tensorflow", "Pandas", "Matplotlib", "Sklearn"]
+	},
+	{
 		"text": "Anon Therapy is a free anonymous way to recieve help from therapist ready on standby",
 		"date": "2021-6-18",
-		"index": 2,
+		"index": 3,
 		"title": "Anon Therapy",
 		"github": "https://github.com/HazimAr/Anon-Therapy",
 		"external": "https://anontherapy.vercel.app/",
@@ -29,7 +37,7 @@
 	{
 		"text": "Backend for Anon therapy. Uses Socket.io and Node.js",
 		"date": "2021-6-18",
-		"index": 3,
+		"index": 4,
 		"title": "Anon Therapy Backend",
 		"github": "https://github.com/HazimAr/Anon-Therapy-Backend",
 		"tech": ["Javascript", "Node.JS", "Socket.IO", "NPM"]
@@ -37,7 +45,7 @@
 	{
 		"text": "This is the backend server for the loved tic-tac-toe multiplayer game using web sockets for real time play",
 		"date": "2021-6",
-		"index": 4,
+		"index": 5,
 		"title": "Tic Tac Toe Multiplayer Server",
 		"github": "https://github.com/HazimAr/Tic-Tac-Toe-Multiplayer-Backend",
 		"external": "https://tic-calpico.herokuapp.com/",
@@ -46,7 +54,7 @@
 	{
 		"text": "Half evil tattoos is a tattoo business based in Kentucky, providing their customers with the most enriching tattoo experience",
 		"date": "2021-6-16",
-		"index": 5,
+		"index": 6,
 		"title": "Half Evil Tattoos",
 		"github": "https://github.com/HazimAr/333Tattoos",
 		"external": "https://www.333tattoos.art/",
@@ -55,7 +63,7 @@
 	{
 		"text": "Fiber framework using the modern programming language golang made by google, fiber has one of the fastest response times",
 		"date": "2021-4",
-		"index": 6,
+		"index": 7,
 		"title": "Golang with Fiber",
 		"github": "https://github.com/NikSchaefer/go-fiber",
 		"tech": ["Fiber", "Golang", "PostgresSQL"]
@@ -63,7 +71,7 @@
 	{
 		"text": "The First Iteration of my Personal Portfolio",
 		"date": "2020-9",
-		"index": 7,
+		"index": 8,
 		"title": "Portfolio V1",
 		"github": "https://github.com/hazimar/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"]

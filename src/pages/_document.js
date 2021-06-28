@@ -15,8 +15,8 @@ const {
 const seo = {
 	title: defaultTitle,
 	description: defaultDescription,
-	image: `${siteUrl}${defaultImage}`,
-	url: `${siteUrl}`,
+	image: defaultImage,
+	url: siteUrl,
 };
 
 // eslint-disable-next-line import/no-default-export
