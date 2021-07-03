@@ -4,7 +4,7 @@
 		"date": "2021-2-4",
 		"index": 1,
 		"title": "NextJS and ChakraUI Boilerplate",
-		"github": "https://github.com/HazimAr/Nextjs-ChakraUI-Boilerplatee",
+		"github": "https://github.com/HazimAr/Nextjs-ChakraUI-Boilerplate",
 		"external": "https://boilerplate.webdefy.tech/",
 		"tech": [
 			"Typescript",
@@ -22,7 +22,7 @@
 		"date": "2021-6-28",
 		"index": 2,
 		"title": "Crypto Currency Predictor",
-		"github": "https://github.com/HazimAr/Crypto-Currency-Predictord",
+		"github": "https://github.com/HazimAr/Crypto-Currency-Predictor",
 		"tech": ["Python", "Tensorflow", "Pandas", "Matplotlib", "Sklearn"]
 	},
 	{

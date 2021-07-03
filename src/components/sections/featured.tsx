@@ -5,7 +5,6 @@ import sr from "@utils/sr";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-
 import jsonData from "../../../content/featured.json";
 import { siteData } from "../../config";
 
@@ -310,6 +309,7 @@ function Featured(): JSX.Element {
 										{github && (
 											<a
 												href={github}
+												target="_blank"
 												aria-label="GitHub Link"
 											>
 												<Icon name="GitHub" />
@@ -319,6 +319,7 @@ function Featured(): JSX.Element {
 											<a
 												href={external}
 												aria-label="External Link"
+												target="_blank"
 												className="external"
 											>
 												<Icon name="External" />
@@ -337,6 +338,8 @@ function Featured(): JSX.Element {
 												? github
 												: "#"
 										}
+										target="_blank"
+										rel="noreferrer"
 									>
 										<Image
 											height={300}

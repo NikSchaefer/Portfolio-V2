@@ -196,6 +196,8 @@ function Projects(): JSX.Element {
 												{github && (
 													<a
 														href={github}
+														target="_blank"
+														rel="noreferrer"
 														aria-label="GitHub Link"
 													>
 														<Icon name="GitHub" />
@@ -204,6 +206,8 @@ function Projects(): JSX.Element {
 												{external && (
 													<a
 														href={external}
+														target="_blank"
+														rel="noreferrer"
 														aria-label="External Link"
 														className="external"
 													>
