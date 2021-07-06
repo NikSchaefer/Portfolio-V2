@@ -1,7 +1,6 @@
 import sr from "@utils/sr";
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-
 import { siteData } from "../../config";
 
 const StyledContactSection = styled.section`
@@ -55,9 +54,9 @@ export default function Contact(): JSX.Element {
 			<h2 className="title">Get In Touch</h2>
 
 			<p>
-				I do fullstack Freelance Development and feel free to send me a
-				message for possible inquires, collaborations, projects or
-				anything else, my inbox is always open. Say Hello!
+				I am a Full Stack Developer. Feel free to send me a
+				message for possible inquires, collaborations, or projects. My
+				inbox is always open. Say Hello!
 			</p>
 
 			<a className="email-link" href={`mailto:${siteData.email}`}>
