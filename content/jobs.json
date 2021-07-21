@@ -6,7 +6,11 @@
 		"location": "Remote",
 		"range": "June 2021 - Current",
 		"url": "https://schoolsimplified.org/",
-		"content": ["My Current Freelance Position"]
+		"content": [
+			"Non-profit organization helping students with their education needs",
+			"Organization has helped of a quarter million students with their education successes",
+			"Worked with students and developers to make a stunning website"
+		]
 	},
 	{
 		"date": "5",
@@ -15,7 +19,11 @@
 		"location": "Remote",
 		"range": "May 2021 - Current",
 		"url": "https://periodize.org/",
-		"content": ["My Current Freelance Position"]
+		"content": [
+			"Company based on fitness and health",
+			"Working with a team of developers using NextJS and React",
+			"My current position"
+		]
 	},
 	{
 		"date": "4",
