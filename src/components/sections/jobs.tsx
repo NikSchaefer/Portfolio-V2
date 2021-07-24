@@ -2,10 +2,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { KEY_CODES } from "@utils/index";
 import sr from "@utils/sr";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
-
 import jsonData from "../../../content/jobs.json";
 import { siteData } from "../../config";
 
@@ -280,6 +279,8 @@ function Jobs(): JSX.Element {
 											<a
 												href={url}
 												className="inline-link"
+												target="_blank"
+												rel="noreferrer"
 											>
 												{company}
 											</a>
