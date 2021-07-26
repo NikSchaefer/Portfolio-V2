@@ -310,6 +310,7 @@ function Featured(): JSX.Element {
 											<a
 												href={github}
 												target="_blank"
+												rel="noreferrer"
 												aria-label="GitHub Link"
 											>
 												<Icon name="GitHub" />
@@ -320,6 +321,7 @@ function Featured(): JSX.Element {
 												href={external}
 												aria-label="External Link"
 												target="_blank"
+												rel="noreferrer"
 												className="external"
 											>
 												<Icon name="External" />
