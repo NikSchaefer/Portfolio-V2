@@ -1,16 +1,6 @@
 [
 	{
 		"date": "1",
-		"title": "Sparks Volleyball",
-		"cover": "sparks.png",
-		"github": "https://github.com/HazimAr/SparksVolleyballClub",
-		"external": "https://sparksvolleyballclub.com/",
-		"tech": ["React", "Typescript", "NextJS", "Chakra UI"],
-		"showInProjects": true,
-		"content": "Sparks volleyball is a club based in las vegas that provide a fun and competitive volleyball experience for kids of all gender and ages"
-	},
-	{
-		"date": "2",
 		"title": "School Simplified",
 		"cover": "school.png",
 		"github": "https://github.com/HazimAr/School-Simplified",
@@ -19,8 +9,8 @@
 		"showInProjects": true,
 		"content": "School Simplified is a non-profit organization dedicated to the development and improvement of students ranging from ages 13+"
 	},
-		{
-		"date": "3",
+	{
+		"date": "2",
 		"title": "Instadog",
 		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/dogegram",
@@ -28,6 +18,16 @@
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
 		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utilizes a random dog Api for Images and videos while text is randomly generated. "
+	},
+	{
+		"date": "3",
+		"title": "Sparks Volleyball",
+		"cover": "sparks.png",
+		"github": "https://github.com/HazimAr/SparksVolleyballClub",
+		"external": "https://sparksvolleyballclub.com/",
+		"tech": ["React", "Typescript", "NextJS", "Chakra UI"],
+		"showInProjects": true,
+		"content": "Sparks volleyball is a club based in las vegas that provide a fun and competitive volleyball experience for kids of all gender and ages"
 	},
 	{
 		"date": "4",
@@ -39,6 +39,4 @@
 		"showInProjects": true,
 		"content": "Play tic tac toe multiplayer online with your friends in realtime using socket io on the server and the frontend, and change colors by going into your settings"
 	}
-
-
 ]

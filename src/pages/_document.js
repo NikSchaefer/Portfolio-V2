@@ -2,14 +2,13 @@ import { GA_TRACKING_ID } from "@src/config.ts";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-import { siteData } from "../config";
+import { siteData } from "config";
 
 const {
 	defaultTitle,
 	defaultDescription,
 	siteUrl,
 	defaultImage,
-	twitterUsername,
 } = siteData.siteMetadata;
 
 const seo = {
