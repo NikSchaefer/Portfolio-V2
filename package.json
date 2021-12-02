@@ -41,7 +41,7 @@
 		"@types/styled-components": "^5.1.16",
 		"babel-plugin-styled-components": "^2.0.2",
 		"eslint": "^8.3.0",
-		"eslint-config-galex": "^3.3.3",
+		"eslint-config-galex": "^3.3.4",
 		"prettier": "^2.5.0"
 	}
 }
