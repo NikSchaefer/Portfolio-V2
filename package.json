@@ -38,7 +38,7 @@
 		"@types/node": "^16.11.13",
 		"@types/react": "^17.0.37",
 		"@types/react-transition-group": "^4.4.4",
-		"@types/styled-components": "^5.1.16",
+		"@types/styled-components": "^5.1.18",
 		"babel-plugin-styled-components": "^2.0.2",
 		"eslint": "^8.3.0",
 		"eslint-config-galex": "^3.3.3",
