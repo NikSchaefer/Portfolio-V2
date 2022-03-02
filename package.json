@@ -40,7 +40,7 @@
 		"@types/react-transition-group": "^4.4.4",
 		"@types/styled-components": "^5.1.24",
 		"babel-plugin-styled-components": "^2.0.2",
-		"eslint": "^8.4.1",
+		"eslint": "^8.10.0",
 		"eslint-config-galex": "^3.6.5",
 		"prettier": "^2.5.1"
 	}
