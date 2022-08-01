@@ -55,19 +55,3 @@ package-lock.json
 # Credit
 
 Design was inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>
-
-# Photos
-
-<img src="/project/portfolio-v2/7.png" alt="Landing Page" />
-
-<img src="/project/portfolio-v2/6.png" alt="About Page" />
-
-<img src="/project/portfolio-v2/5.png" alt="Skill Page" />
-
-<img src="/project/portfolio-v2/4.png" alt="Projects Page" />
-
-<img src="/project/portfolio-v2/3.png" alt="Contact Page" />
-
-<img src="/project/portfolio-v2/2.png" alt="Projects Page" />
-
-<img src="/project/portfolio-v2/1.png" alt="Contact Page" />
