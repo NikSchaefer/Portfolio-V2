@@ -32,7 +32,7 @@
 		"typescript": "^5.0.4"
 	},
 	"devDependencies": {
-		"@babel/preset-typescript": "^7.21.4",
+		"@babel/preset-typescript": "^7.21.5",
 		"@types/animejs": "^3.1.7",
 		"@types/babel__core": "^7.20.0",
 		"@types/node": "^20.0.0",
