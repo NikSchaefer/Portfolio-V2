@@ -35,7 +35,7 @@
 		"@babel/preset-typescript": "^7.21.5",
 		"@types/animejs": "^3.1.7",
 		"@types/babel__core": "^7.20.0",
-		"@types/node": "^20.7.1",
+		"@types/node": "^20.10.4",
 		"@types/react": "^18.2.39",
 		"@types/react-transition-group": "^4.4.9",
 		"@types/styled-components": "^5.1.26",
