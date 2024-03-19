@@ -36,7 +36,7 @@
 		"@types/animejs": "^3.1.7",
 		"@types/babel__core": "^7.20.5",
 		"@types/node": "^20.11.16",
-		"@types/react": "^18.2.46",
+		"@types/react": "^18.2.67",
 		"@types/react-transition-group": "^4.4.10",
 		"@types/styled-components": "^5.1.26",
 		"babel-plugin-styled-components": "^2.1.3",
